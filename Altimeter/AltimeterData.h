@@ -11,6 +11,6 @@ typedef union {
     uint32_t timeStamp_ms;
   };
   
-  uint16_t values[ALTIMETER_DATA_SIZE_BYTE];
+  uint8_t values[ALTIMETER_DATA_SIZE_BYTE];
 }
 AltimeterData;
