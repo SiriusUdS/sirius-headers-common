@@ -2,6 +2,8 @@
 
 #include "AccelerometerStatus.h"
 
+#define ACCELEROMETER_DATA_SIZE_BYTE 12
+
 typedef struct {
   uint16_t x;
   uint16_t y;
@@ -16,6 +18,6 @@ typedef union {
     uint32_t timeStamp_ms;
   };
   
-  uint16_t values[(sizeof(AccelerometerAxis) + sizeof(AccelerometerStatus) + sizeof(timeStamp_ms)) / sizeof(uint16_t)];
+  uint8_t values[ACCELEROMETER_DATA_SIZE_BYTE];
 }
 AccelerometerData;

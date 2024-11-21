@@ -13,4 +13,4 @@ typedef union {
   bits;
   uint16_t value;
 }
-AccelerometerStatus;
+GyroscopeStatus;
