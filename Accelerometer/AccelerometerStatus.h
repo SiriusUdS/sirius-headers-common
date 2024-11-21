@@ -7,6 +7,6 @@
 #endif
 
 typedef struct {
-  // uint32_t
+  uint16_t reserved : 16;
 }
 AccelerometerStatus;
