@@ -16,6 +16,6 @@ typedef union {
     uint32_t timeStamp_ms;
   };
   
-  uint16_t accelerometerValues[sizeof(AccelerometerAxis) + sizeof(AccelerometerStatus) +(sizeof(timeStamp_ms) / sizeof(uint32_t))];
+  uint16_t values[(sizeof(AccelerometerAxis) + sizeof(AccelerometerStatus) + sizeof(timeStamp_ms)) / sizeof(uint16_t)];
 }
 AccelerometerData;

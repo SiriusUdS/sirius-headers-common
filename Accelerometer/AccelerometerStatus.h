@@ -9,4 +9,10 @@
 typedef struct {
   uint16_t reserved : 16;
 }
+AccelerometerStatusBits;
+
+typedef union {
+  AccelerometerStatusBits bits;
+  uint16_t value;
+}
 AccelerometerStatus;
