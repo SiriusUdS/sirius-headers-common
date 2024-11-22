@@ -1,10 +1,6 @@
 #pragma once
 
-#ifdef EMBEDDED
-  #include <stdint.h>
-#else
-  #include <cstdint.h>
-#endif
+#include <stdint.h>
 
 typedef union {
   struct {
