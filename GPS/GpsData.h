@@ -4,17 +4,12 @@
 
 #define GPS_DATA_SIZE_BYTE 32
 
-typedef struct {
-  uint32_t position_s;
-  uint8_t direction;
-}
-GpsCoord;
-
 typedef union {
   struct {
-    GpsCoord latitude;
-    GpsCoord longitude;
+    int32_t latitude_s;
+    int32_t longitude_s;
     GpsStatus status;
+    uint16_t padding;
     uint32_t timeStamp_ms;
   };
   
