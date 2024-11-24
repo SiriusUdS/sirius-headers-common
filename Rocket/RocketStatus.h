@@ -10,4 +10,4 @@ typedef union {
   bits;
   uint16_t value;
 }
-PressureSensorStatus;
+RocketStatus;
