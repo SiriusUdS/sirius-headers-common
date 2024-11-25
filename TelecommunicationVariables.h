@@ -14,14 +14,9 @@
 #define THERMOCOUPLE_DATA_HEADER_CODE    0x54484D // "THM"
 #define VALVE_DATA_HEADER_CODE           0x564C56 // "VLV"
 
-#define HEADER_SIZE_BYTE 4
+#define HEADER_SIZE_4BYTE 1
 
-typedef union {
-  struct {
-    uint32_t sensorCode : 24;
-    uint32_t sensorIndex : 8;
-  }
-  bits;
-  uint32_t value;
+typedef struct {
+  uint32_t values[HEADER_SIZE_4BYTE];
 }
 TelecommunicationHeader;
