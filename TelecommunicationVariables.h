@@ -15,6 +15,7 @@
 #define VALVE_DATA_HEADER_CODE           0x564C56 // "VLV"
 
 #define HEADER_SIZE_4BYTE 1
+#define HEADER_SIZE_BYTE 4 * HEADER_SIZE_4BYTE
 
 typedef struct {
   uint32_t values[HEADER_SIZE_4BYTE];
