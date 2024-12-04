@@ -13,4 +13,4 @@ typedef union {
   packet;
   uint8_t data[HEADER_SIZE_BYTE + (GYROSCOPE_AMOUNT * GYROSCOPE_DATA_SIZE_BYTE)];
 }
-ThermocouplePacket;
+GyroscopePacket;

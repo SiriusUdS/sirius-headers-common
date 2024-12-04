@@ -13,4 +13,4 @@ typedef union {
   packet;
   uint8_t data[HEADER_SIZE_BYTE + (PRESSURE_SENSOR_AMOUNT * PRESSURE_SENSOR_DATA_SIZE_BYTE)];
 }
-ThermocouplePacket;
+PressureSensorPacket;
