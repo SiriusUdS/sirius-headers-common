@@ -13,9 +13,9 @@ AccelerometerAxis;
 
 typedef union {
   struct {
-    AccelerometerAxis axis;
+    AccelerometerAxis   axis;
     AccelerometerStatus status;
-    uint32_t timeStamp_ms;
+    uint32_t            timeStamp_ms;
   };
   
   uint8_t values[ACCELEROMETER_DATA_SIZE_BYTE];
