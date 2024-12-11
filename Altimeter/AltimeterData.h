@@ -4,9 +4,14 @@
 
 #define ALTIMETER_DATA_SIZE_BYTE 8
 
+typedef struct {
+  uint16_t value;
+}
+AltimeterAltitude;
+
 typedef union {
   struct {
-    uint16_t altitude;
+    AltimeterAltitude altitude;
     AltimeterStatus status;
     uint32_t timeStamp_ms;
   };

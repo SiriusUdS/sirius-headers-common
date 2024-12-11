@@ -2,12 +2,22 @@
 
 #include "GpsStatus.h"
 
-#define GPS_DATA_SIZE_BYTE 32
+#define GPS_DATA_SIZE_BYTE 16
+
+typedef struct {
+  int32_t value_s;
+}
+GpsCoordinateAxis;
+
+typedef struct {
+  GpsCoordinateAxis latitude;
+  GpsCoordinateAxis longitude;
+}
+GpsCoordinate;
 
 typedef union {
   struct {
-    int32_t latitude_s;
-    int32_t longitude_s;
+    GpsCoordinate position;
     GpsStatus status;
     uint16_t padding;
     uint32_t timeStamp_ms;
