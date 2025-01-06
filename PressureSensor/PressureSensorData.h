@@ -11,9 +11,9 @@ PressureSensorValue;
 
 typedef union {
   struct {
-    PressureSensorValue pressure;
-    PressureSensorStatus status;
-    uint32_t timeStamp_ms;
+    PressureSensorValue   pressure;
+    PressureSensorStatus  status;
+    uint32_t              timeStamp_ms;
   };
   
   uint8_t values[PRESSURE_SENSOR_DATA_SIZE_BYTE];

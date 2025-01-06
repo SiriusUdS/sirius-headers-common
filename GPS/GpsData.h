@@ -18,9 +18,9 @@ GpsCoordinate;
 typedef union {
   struct {
     GpsCoordinate position;
-    GpsStatus status;
-    uint16_t padding;
-    uint32_t timeStamp_ms;
+    GpsStatus     status;
+    uint16_t      padding;
+    uint32_t      timeStamp_ms;
   };
   
   uint8_t values[GPS_DATA_SIZE_BYTE];

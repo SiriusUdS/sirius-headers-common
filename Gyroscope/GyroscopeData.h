@@ -13,9 +13,9 @@ GyroscopeAxis;
 
 typedef union {
   struct {
-    GyroscopeAxis axis;
+    GyroscopeAxis   axis;
     GyroscopeStatus status;
-    uint32_t timeStamp_ms;
+    uint32_t        timeStamp_ms;
   };
   
   uint8_t values[GYROSCOPE_DATA_SIZE_BYTE];

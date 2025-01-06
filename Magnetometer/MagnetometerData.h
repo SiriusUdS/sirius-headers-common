@@ -13,9 +13,9 @@ MagnetometerAxis;
 
 typedef union {
   struct {
-    MagnetometerAxis axis;
-    MagnetometerStatus status;
-    uint32_t timeStamp_ms;
+    MagnetometerAxis    axis;
+    MagnetometerStatus  status;
+    uint32_t            timeStamp_ms;
   };
   
   uint8_t values[MAGNETOMETER_DATA_SIZE_BYTE];
