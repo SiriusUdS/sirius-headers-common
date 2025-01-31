@@ -4,7 +4,7 @@
 
 typedef union {
   struct {
-    uint16_t initialized : 1;
+    uint16_t notInitialized : 1;
     uint16_t RESERVED : 15;
   }
   bits;
