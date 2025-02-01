@@ -16,8 +16,9 @@ typedef union {
     AccelerometerAxis   axis;
     AccelerometerStatus status;
     uint32_t            timeStamp_ms;
-  };
+  }
+  members;
   
-  uint8_t values[ACCELEROMETER_DATA_SIZE_BYTE];
+  uint8_t values[sizeof(members)];
 }
 AccelerometerData;
