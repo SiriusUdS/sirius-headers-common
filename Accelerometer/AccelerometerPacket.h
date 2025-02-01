@@ -1,16 +1,34 @@
 #pragma once
 
 #include "AccelerometerData.h"
+#include "AccelerometerStatus.h"
+#include "AccelerometerErrorStatus.h"
+
 #include "../Telecommunication/TelecommunicationHeader.h"
 
 #define ACCELEROMETER_AMOUNT 1
 
 typedef union {
   struct {
+    AccelerometerData         axis;
+
+    AccelerometerErrorStatus  errorStatus;
+    AccelerometerStatus       status;
+    uint32_t                  timeStamp_ms;
+  }
+  members;
+  
+  uint8_t values[sizeof(members)];
+}
+AccelerometerPacketData;
+
+typedef union {
+  struct {
     TelecommunicationHeader header;
-    AccelerometerData       rawData[ACCELEROMETER_AMOUNT];
+    AccelerometerPacketData rawData[ACCELEROMETER_AMOUNT];
   }
   packet;
-  uint8_t data[HEADER_SIZE_BYTE + (ACCELEROMETER_AMOUNT * ACCELEROMETER_DATA_SIZE_BYTE)];
+
+  uint8_t data[sizeof(packet)];
 }
 AccelerometerPacket;

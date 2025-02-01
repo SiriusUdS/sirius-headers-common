@@ -1,16 +1,21 @@
 #pragma once
 
 #include "TelecommunicationStatus.h"
+#include "TelecommunicationErrorStatus.h"
+
 #include "TelecommunicationHeader.h"
 
 #define THERMOCOUPLE_AMOUNT 8
 
 typedef union {
   struct {
-    TelecommunicationHeader header;
-    TelecommunicationStatus rawData;
+    TelecommunicationHeader       header;
+
+    TelecommunicationErrorStatus  errorStatus;
+    TelecommunicationStatus       status;
   }
   packet;
-  uint8_t data[HEADER_SIZE_BYTE + TELECOMMUNICATION_STATUS_SIZE_BYTE];
+
+  uint8_t data[sizeof(packet)];
 }
-ThermocouplePacket;
+TelecommunicationPacket;

@@ -1,8 +1,7 @@
 #pragma once
 
-#include "ThermocoupleData.h"
-#include "ThermocoupleStatus.h"
-#include "ThermocoupleErrorStatus.h"
+#include "ValveStatus.h"
+#include "ValveErrorStatus.h"
 
 #include "../Telecommunication/TelecommunicationHeader.h"
 
@@ -10,10 +9,8 @@
 
 typedef union {
   struct {
-    ThermocoupleData info;
-
-    ThermocoupleErrorStatus errorStatus;
-    ThermocoupleStatus      status;
+    ValveErrorStatus errorStatus;
+    ValveStatus      status;
 
     uint32_t                timeStamp_ms;
   }
@@ -21,15 +18,15 @@ typedef union {
   
   uint8_t values[sizeof(members)];
 }
-ThermocouplePacketData;
+ValvePacketData;
 
 typedef union {
   struct {
     TelecommunicationHeader header;
-    ThermocouplePacketData  rawData[THERMOCOUPLE_AMOUNT];
+    ValvePacketData         rawData[THERMOCOUPLE_AMOUNT];
   }
   packet;
 
   uint8_t data[sizeof(packet)];
 }
-ThermocouplePacket;
+ValvePacket;
