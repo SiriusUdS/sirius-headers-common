@@ -1,5 +1,6 @@
 #pragma once
 
+#define ENGINE_PWM_AMOUNT 2
 #define ENGINE_VALVE_AMOUNT 2
 
 #define ENGINE_IPA_VALVE_INDEX 0
