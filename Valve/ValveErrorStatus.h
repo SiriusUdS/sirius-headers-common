@@ -14,6 +14,7 @@ typedef union {
     uint16_t RESERVED2 : 10;
   }
   bits;
+  
   uint16_t value;
 }
 ValveErrorStatus;
