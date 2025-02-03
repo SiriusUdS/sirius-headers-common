@@ -10,7 +10,7 @@
 
 typedef union {
   struct {
-    GpsData         position;
+    GpsData         data;
 
     GPSErrorStatus  errorStatus;
     GpsStatus       status;

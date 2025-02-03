@@ -3,12 +3,16 @@
 #include "ValveStatus.h"
 #include "ValveErrorStatus.h"
 
+#include "ValveData.h"
+
 #include "../Telecommunication/TelecommunicationHeader.h"
 
 #define THERMOCOUPLE_AMOUNT 8
 
 typedef union {
   struct {
+    ValveData data;
+
     ValveErrorStatus errorStatus;
     ValveStatus      status;
 

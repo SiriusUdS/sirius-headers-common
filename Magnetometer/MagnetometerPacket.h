@@ -10,7 +10,7 @@
 
 typedef union {
   struct {
-    MagnetometerData        axis;
+    MagnetometerData        data;
 
     MagnetometerErrorStatus errorStatus;
     MagnetometerStatus      status;

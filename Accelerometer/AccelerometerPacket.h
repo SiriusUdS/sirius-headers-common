@@ -10,7 +10,7 @@
 
 typedef union {
   struct {
-    AccelerometerData         axis;
+    AccelerometerData         data;
 
     AccelerometerErrorStatus  errorStatus;
     AccelerometerStatus       status;

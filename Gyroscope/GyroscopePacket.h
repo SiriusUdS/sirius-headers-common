@@ -10,7 +10,7 @@
 
 typedef union {
   struct {
-    GyroscopeAxis         axis;
+    GyroscopeAxis         data;
 
     GyroscopeErrorStatus  errorStatus;
     GyroscopeStatus       status;

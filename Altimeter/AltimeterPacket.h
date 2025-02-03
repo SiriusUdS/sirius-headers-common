@@ -12,7 +12,7 @@
 
 typedef union {
   struct {
-    AltimeterData         altitude;
+    AltimeterData         data;
 
     AltimeterErrorStatus  errorStatus;
     AltimeterStatus       status;

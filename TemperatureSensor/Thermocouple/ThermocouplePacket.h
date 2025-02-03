@@ -10,7 +10,7 @@
 
 typedef union {
   struct {
-    ThermocoupleData info;
+    ThermocoupleData data;
 
     ThermocoupleErrorStatus errorStatus;
     ThermocoupleStatus      status;
