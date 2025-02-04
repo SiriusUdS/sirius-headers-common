@@ -9,7 +9,9 @@ typedef union {
     uint16_t defaultFunctionCalled : 1;
     uint16_t initTimerError : 1;
 
-    uint16_t RESERVED : 12;
+    uint16_t invalidTimerChannel : 1;
+
+    uint16_t RESERVED : 11;
   }
   bits;
 
