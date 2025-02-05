@@ -10,6 +10,7 @@ typedef union {
     uint16_t RESERVED : 13;
   }
   bits;
+  
   uint16_t value;
 }
 GPSErrorStatus;

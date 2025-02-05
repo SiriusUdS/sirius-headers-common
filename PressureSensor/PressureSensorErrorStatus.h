@@ -13,7 +13,8 @@ typedef union {
     uint16_t leakDetected     : 1;
     uint16_t belowMinPressure : 1;
     uint16_t aboveMaxPressure : 1;
-    uint16_t RESERVED               : 10;
+
+    uint16_t RESERVED : 8;
   }
   bits;
 

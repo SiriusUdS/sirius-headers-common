@@ -9,6 +9,7 @@ typedef union {
     uint16_t RESERVED : 14;
   }
   bits;
+  
   uint16_t value;
 }
 EngineErrorStatus;
