@@ -9,7 +9,11 @@ typedef union {
     uint16_t defaultFunctionCalled  : 1;
     uint16_t notConnected           : 1;
 
-    uint16_t RESERVED               : 12;
+    uint16_t leakSuspected    : 1;
+    uint16_t leakDetected     : 1;
+    uint16_t belowMinPressure : 1;
+    uint16_t aboveMaxPressure : 1;
+    uint16_t RESERVED               : 10;
   }
   bits;
 

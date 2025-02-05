@@ -9,7 +9,9 @@ typedef union {
     uint16_t defaultFunctionCalled : 1;
     uint16_t notConnected : 1;
 
-    uint16_t RESERVED : 12;
+    uint16_t belowMinTemperature : 1;
+    uint16_t aboveMaxTemperature : 1;
+    uint16_t RESERVED : 10;
   }
   bits;
   uint16_t value;

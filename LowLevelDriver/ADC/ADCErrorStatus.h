@@ -4,13 +4,13 @@
 
 typedef union {
   struct {
-    uint16_t notInitialized : 1;
-    uint16_t nullFunctionPointer : 1;
-    uint16_t defaultFunctionCalled : 1;
+    uint16_t notInitialized         : 1;
+    uint16_t nullFunctionPointer    : 1;
+    uint16_t defaultFunctionCalled  : 1;
+    uint16_t notConnected           : 1;
 
-    uint16_t isDisconnected : 1;
-    uint16_t belowMinAnticipatedValue : 1;
-    uint16_t aboveMaxAnticipatedValue : 1;
+    uint16_t belowMinValue    : 1;
+    uint16_t aboveMaxValue    : 1;
     uint16_t isShortCircuited : 1;
 
     uint16_t RESERVED : 9;
