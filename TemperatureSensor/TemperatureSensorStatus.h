@@ -10,4 +10,4 @@ typedef union {
   
   uint16_t value;
 }
-ThermistanceStatus;
+TemperatureSensorStatus;
