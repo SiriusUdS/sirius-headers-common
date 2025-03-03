@@ -1,23 +1,10 @@
 #pragma once
 
-#include "AccelerometerStatus.h"
-
-#define ACCELEROMETER_DATA_SIZE_BYTE 12
+#include <stdint.h>
 
 typedef struct {
-  uint16_t x;
-  uint16_t y;
-  uint16_t z;
-}
-AccelerometerAxis;
-
-typedef union {
-  struct {
-    AccelerometerAxis axis;
-    AccelerometerStatus status;
-    uint32_t timeStamp_ms;
-  };
-  
-  uint8_t values[ACCELEROMETER_DATA_SIZE_BYTE];
+  uint16_t rawX;
+  uint16_t rawY;
+  uint16_t rawZ;
 }
 AccelerometerData;

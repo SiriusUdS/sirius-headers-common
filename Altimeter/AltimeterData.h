@@ -1,16 +1,8 @@
 #pragma once
 
-#include "AltimeterStatus.h"
+#include <stdint.h>
 
-#define ALTIMETER_DATA_SIZE_BYTE 8
-
-typedef union {
-  struct {
-    uint16_t altitude;
-    AltimeterStatus status;
-    uint32_t timeStamp_ms;
-  };
-  
-  uint8_t values[ALTIMETER_DATA_SIZE_BYTE];
+typedef struct {
+  uint16_t rawAltitude;
 }
 AltimeterData;

@@ -1,24 +1,10 @@
 #pragma once
 
-#include "GyroscopeStatus.h"
-
-#define GYROSCOPE_DATA_SIZE_BYTE 12
+#include <stdint.h>
 
 typedef struct {
-  uint16_t x;
-  uint16_t y;
-  uint16_t z;
+  uint16_t rawX;
+  uint16_t rawY;
+  uint16_t rawZ;
 }
 GyroscopeAxis;
-
-typedef union {
-  struct {
-    GyroscopeAxis axis;
-    GyroscopeStatus status;
-    uint32_t timeStamp_ms;
-  };
-  
-  uint8_t values[GYROSCOPE_DATA_SIZE_BYTE];
-}
-GyroscopeData;
-

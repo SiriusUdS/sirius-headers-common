@@ -1,16 +1,34 @@
 #pragma once
 
 #include "PressureSensorData.h"
-#include "../TelecommunicationVariables.h"
+#include "PressureSensorStatus.h"
+#include "PressureSensorErrorStatus.h"
+
+#include "../Telecommunication/TelecommunicationHeader.h"
 
 #define PRESSURE_SENSOR_AMOUNT 1
 
 typedef union {
   struct {
-    TelecommunicationHeader header;
-    PressureSensorData rawData[PRESSURE_SENSOR_AMOUNT];
+    PressureSensorData    data;
+
+    PressureSensorStatus  status;
+
+    uint32_t              timeStamp_ms;
+  }
+  members;
+  
+  uint8_t values[sizeof(members)];
+}
+PressureSensorPacketData;
+
+typedef union {
+  struct {
+    TelecommunicationHeader   header;
+    PressureSensorPacketData  rawData[PRESSURE_SENSOR_AMOUNT];
   }
   packet;
-  uint8_t data[HEADER_SIZE_BYTE + (PRESSURE_SENSOR_AMOUNT * PRESSURE_SENSOR_DATA_SIZE_BYTE)];
+
+  uint8_t data[sizeof(packet)];
 }
 PressureSensorPacket;
