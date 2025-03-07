@@ -16,7 +16,7 @@ typedef union {
     ValveErrorStatus errorStatus;
     ValveStatus      status;
 
-    uint32_t                timeStamp_ms;
+    uint32_t timeStamp_ms;
   }
   members;
   

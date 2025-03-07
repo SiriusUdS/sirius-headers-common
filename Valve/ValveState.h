@@ -2,7 +2,7 @@
 
 #include <stdint.h>
 
-typedef enum : uint16_t {
+typedef enum {
   VALVE_UNKNOWN,
   VALVE_OPENED,
   VALVE_CLOSED,
