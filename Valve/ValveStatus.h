@@ -4,9 +4,8 @@
 
 typedef union {
   struct {
-    uint16_t isOpening : 1;
-    uint16_t isClosing : 1;
-    uint16_t RESERVED : 14;
+    uint16_t isIdle   : 1;
+    uint16_t RESERVED : 15;
   }
   bits;
 
