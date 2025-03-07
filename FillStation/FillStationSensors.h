@@ -18,6 +18,9 @@
 #define FILL_STATION_ADC_CHANNEL_AMOUNT FILL_STATION_THERMISTANCE_AMOUNT + FILL_STATION_LOAD_CELL_AMOUNT
 #define FILL_STATION_PWM_AMOUNT         FILL_STATION_VALVE_AMOUNT
 
+/***************************************************/
+/***                Array Indexes                ***/
+/***************************************************/
 #define FILL_STATION_NOS_VALVE_INDEX      0
 #define FILL_STATION_NOS_DUMP_VALVE_INDEX 1
 
