@@ -1,6 +1,7 @@
 #pragma once
 
 typedef enum {
+  ENGINE_STATE_INIT,
   ENGINE_STATE_IDLE,
   ENGINE_STATE_ARMED,
   ENGINE_STATE_IGNITION,
