@@ -4,7 +4,8 @@
 
 typedef union {
   struct {
-    uint16_t RESERVED : 16;
+    uint16_t rxDataReady : 1;
+    uint16_t RESERVED : 15;
   }
   bits;
 
