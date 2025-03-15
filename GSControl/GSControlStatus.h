@@ -7,7 +7,6 @@ typedef union {
     uint16_t RESERVED : 16;
   }
   bits;
-  
   uint16_t value;
 }
-ThermistanceStatus;
+GSControlStatus;

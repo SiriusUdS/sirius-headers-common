@@ -1,8 +1,28 @@
 #pragma once
 
-#define FILL_STATION_THERMISTANCE_AMOUNT  4
-#define FILL_STATION_LOAD_CELL_AMOUNT     2
-#define FILL_STATION_HEATPAD_AMOUNT       4
+/***************************************************/
+/***            Sensors/Devices Amount           ***/
+/***************************************************/
+#define FILL_STATION_THERMISTANCE_AMOUNT 4
+#define FILL_STATION_LOAD_CELL_AMOUNT    2
+#define FILL_STATION_HEATPAD_AMOUNT      4
+#define FILL_STATION_VALVE_AMOUNT        2
+
+/***************************************************/
+/***           Peripheral Distribution           ***/
+/***************************************************/
+
+/***************************************************/
+/***              Peripheral Amount              ***/
+/***************************************************/
+#define FILL_STATION_ADC_CHANNEL_AMOUNT FILL_STATION_THERMISTANCE_AMOUNT + FILL_STATION_LOAD_CELL_AMOUNT
+#define FILL_STATION_PWM_AMOUNT         FILL_STATION_VALVE_AMOUNT
+
+/***************************************************/
+/***                Array Indexes                ***/
+/***************************************************/
+#define FILL_STATION_NOS_VALVE_INDEX      0
+#define FILL_STATION_NOS_DUMP_VALVE_INDEX 1
 
 #define FILL_STATION_FILL_VALVE_THERMISTANCE_INDEX    0
 #define FILL_STATION_QUICK_CONNECT_THERMISTANCE_INDEX 1
