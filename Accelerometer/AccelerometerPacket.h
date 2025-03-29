@@ -20,7 +20,7 @@ AccelerometerDataMembers;
 typedef union {
   AccelerometerDataMembers members;
   
-  uint8_t values[sizeof(members)];
+  uint8_t values[sizeof(AccelerometerDataMembers)];
 }
 AccelerometerPacketData;
 
@@ -33,6 +33,6 @@ AccelerometerPacketFields;
 typedef union {
   AccelerometerPacketFields fields;
 
-  uint8_t data[sizeof(fields)];
+  uint8_t data[sizeof(AccelerometerPacketFields)];
 }
 AccelerometerPacket;
