@@ -8,27 +8,31 @@
 
 #define ACCELEROMETER_AMOUNT 1
 
-typedef union {
-  struct {
-    AccelerometerData         data;
+typedef struct {
+  AccelerometerData         data;
 
-    AccelerometerErrorStatus  errorStatus;
-    AccelerometerStatus       status;
-    uint32_t                  timeStamp_ms;
-  }
-  members;
+  AccelerometerErrorStatus  errorStatus;
+  AccelerometerStatus       status;
+  uint32_t                  timeStamp_ms;
+}
+AccelerometerDataMembers;
+
+typedef union {
+  AccelerometerDataMembers members;
   
   uint8_t values[sizeof(members)];
 }
 AccelerometerPacketData;
 
-typedef union {
-  struct {
-    TelecommunicationHeader header;
-    AccelerometerPacketData rawData[ACCELEROMETER_AMOUNT];
-  }
-  packet;
+typedef struct {
+  TelecommunicationHeader header;
+  AccelerometerPacketData rawData[ACCELEROMETER_AMOUNT];
+}
+AccelerometerPacketFields;
 
-  uint8_t data[sizeof(packet)];
+typedef union {
+  AccelerometerPacketFields fields;
+
+  uint8_t data[sizeof(fields)];
 }
 AccelerometerPacket;
