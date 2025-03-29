@@ -8,27 +8,29 @@
 
 #define PRESSURE_SENSOR_AMOUNT 1
 
+typedef struct {
+  PressureSensorData    data;
+  PressureSensorStatus  status;
+  uint32_t              timeStamp_ms;
+}
+PressureSensorDataMembers;
+
 typedef union {
-  struct {
-    PressureSensorData    data;
-
-    PressureSensorStatus  status;
-
-    uint32_t              timeStamp_ms;
-  }
-  members;
+  PressureSensorDataMembers members;
   
-  uint8_t values[sizeof(members)];
+  uint8_t values[sizeof(PressureSensorDataMembers)];
 }
 PressureSensorPacketData;
 
-typedef union {
-  struct {
-    TelecommunicationHeader   header;
-    PressureSensorPacketData  rawData[PRESSURE_SENSOR_AMOUNT];
-  }
-  packet;
+typedef struct {
+  TelecommunicationHeader   header;
+  PressureSensorPacketData  rawData[PRESSURE_SENSOR_AMOUNT];
+}
+PressureSensorPacketFields;
 
-  uint8_t data[sizeof(packet)];
+typedef union {
+  PressureSensorPacketFields fields;
+
+  uint8_t data[sizeof(PressureSensorPacketFields)];
 }
 PressureSensorPacket;
