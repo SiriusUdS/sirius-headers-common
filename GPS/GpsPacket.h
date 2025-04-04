@@ -6,30 +6,32 @@
 
 #include "../Telecommunication/TelecommunicationHeader.h"
 
-#define GPS_AMOUNT 2
+typedef struct {
+  GpsData         data;
+
+  GPSErrorStatus  errorStatus;
+  GpsStatus       status;
+
+  uint32_t        timeStamp_ms;
+}
+GpsPacketDataMembers;
 
 typedef union {
-  struct {
-    GpsData         data;
-
-    GPSErrorStatus  errorStatus;
-    GpsStatus       status;
-
-    uint32_t        timeStamp_ms;
-  }
-  members;
+  GpsPacketDataMembers members;
   
-  uint8_t values[sizeof(members)];
+  uint8_t values[sizeof(GpsPacketDataMembers)];
 }
 GpsPacketData;
 
-typedef union {
-  struct {
-    TelecommunicationHeader header;
-    GpsPacketData           rawData[GPS_AMOUNT];
-  }
-  packet;
+typedef struct {
+  TelecommunicationHeader header;
+  GpsPacketData           rawData;
+}
+GpsPacketFields;
 
-  uint8_t data[sizeof(packet)];
+typedef union {
+  GpsPacketFields fields;
+
+  uint8_t data[sizeof(GpsPacketFields)];
 }
 GpsPacket;

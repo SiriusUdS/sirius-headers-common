@@ -6,28 +6,32 @@
 
 #include "../Telecommunication/TelecommunicationHeader.h"
 
+typedef struct {
+  LoadCellData    data;
+
+  LoadCellErrorStatus errorStatus;
+  LoadCellStatus      status;
+
+  uint32_t              timeStamp_ms;
+}
+LoadCellPacketDataMembers;
+
 typedef union {
-  struct {
-    LoadCellData    data;
-
-    LoadCellErrorStatus errorStatus;
-    LoadCellStatus      status;
-
-    uint32_t              timeStamp_ms;
-  }
-  members;
+  LoadCellPacketDataMembers members;
   
-  uint8_t values[sizeof(members)];
+  uint8_t values[sizeof(LoadCellPacketDataMembers)];
 }
 LoadCellPacketData;
 
-typedef union {
-  struct {
-    TelecommunicationHeader header;
-    LoadCellPacketData      rawData;
-  }
-  packet;
+typedef struct {
+  TelecommunicationHeader header;
+  LoadCellPacketData      rawData;
+}
+LoadCellPacketFields;
 
-  uint8_t data[sizeof(packet)];
+typedef union {
+  LoadCellPacketFields fields;
+
+  uint8_t data[sizeof(LoadCellPacketFields)];
 }
 LoadCellPacket;

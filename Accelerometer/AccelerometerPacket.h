@@ -6,8 +6,6 @@
 
 #include "../Telecommunication/TelecommunicationHeader.h"
 
-#define ACCELEROMETER_AMOUNT 1
-
 typedef struct {
   AccelerometerData         data;
 
@@ -26,7 +24,7 @@ AccelerometerPacketData;
 
 typedef struct {
   TelecommunicationHeader header;
-  AccelerometerPacketData rawData[ACCELEROMETER_AMOUNT];
+  AccelerometerPacketData rawData;
 }
 AccelerometerPacketFields;
 

@@ -8,28 +8,32 @@
 
 #define GYROSCOPE_AMOUNT 2
 
+typedef struct {
+  GyroscopeAxis         data;
+
+  GyroscopeErrorStatus  errorStatus;
+  GyroscopeStatus       status;
+
+  uint32_t              timeStamp_ms;
+}
+GyroscopeDataMembers;
+
 typedef union {
-  struct {
-    GyroscopeAxis         data;
-
-    GyroscopeErrorStatus  errorStatus;
-    GyroscopeStatus       status;
-
-    uint32_t              timeStamp_ms;
-  }
-  members;
+  GyroscopeDataMembers members;
   
-  uint8_t values[sizeof(members)];
+  uint8_t values[sizeof(GyroscopeDataMembers)];
 }
 GyroscopeData;
 
-typedef union {
-  struct {
-    TelecommunicationHeader header;
-    GyroscopeData           rawData[GYROSCOPE_AMOUNT];
-  }
-  packet;
+typedef struct {
+  TelecommunicationHeader header;
+  GyroscopeData           rawData[GYROSCOPE_AMOUNT];
+}
+GyroscopePacketFields;
 
-  uint8_t data[sizeof(packet)];
+typedef union {
+  GyroscopePacketFields fields;
+
+  uint8_t data[sizeof(GyroscopePacketFields)];
 }
 GyroscopePacket;
