@@ -9,9 +9,12 @@
 #define PRESSURE_SENSOR_AMOUNT 1
 
 typedef struct {
-  PressureSensorData    data;
-  PressureSensorStatus  status;
-  uint32_t              timeStamp_ms;
+  PressureSensorData data;
+
+  PressureSensorStatus      status;
+  PressureSensorErrorStatus status;
+
+  uint32_t timeStamp_ms;
 }
 PressureSensorDataMembers;
 

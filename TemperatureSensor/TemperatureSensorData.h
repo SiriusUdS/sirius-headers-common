@@ -3,6 +3,6 @@
 #include "TemperatureSensorStatus.h"
 
 typedef struct {
-  uint16_t  rawTemperature;
+  uint32_t  rawTemperature;
 }
 TemperatureSensorData;

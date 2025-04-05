@@ -3,6 +3,6 @@
 #include <stdint.h>
 
 typedef struct {
-  uint16_t rawPressure;
+  uint32_t rawPressure;
 }
 PressureSensorData;
