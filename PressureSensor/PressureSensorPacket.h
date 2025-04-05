@@ -12,7 +12,7 @@ typedef struct {
   PressureSensorData data;
 
   PressureSensorStatus      status;
-  PressureSensorErrorStatus status;
+  PressureSensorErrorStatus errorStatus;
 
   uint32_t timeStamp_ms;
 }
