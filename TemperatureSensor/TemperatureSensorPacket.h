@@ -6,30 +6,32 @@
 
 #include "../Telecommunication/TelecommunicationHeader.h"
 
-#define THERMISTANCE_AMOUNT 8
+typedef struct {
+  TemperatureSensorData data;
+
+  TemperatureSensorErrorStatus errorStatus;
+  TemperatureSensorStatus      status;
+
+  uint32_t timeStamp_ms;
+}
+TemperatureSensorPacketDataMembers;
 
 typedef union {
-  struct {
-    TemperatureSensorData        data;
-
-    TemperatureSensorErrorStatus errorStatus;
-    TemperatureSensorStatus      status;
-
-    uint32_t                     timeStamp_ms;
-  }
-  members;
+  TemperatureSensorPacketDataMembers members;
   
-  uint8_t values[sizeof(members)];
+  uint8_t values[sizeof(TemperatureSensorPacketDataMembers)];
 }
 TemperatureSensorPacketData;
 
-typedef union {
-  struct {
-    TelecommunicationHeader header;
-    TemperatureSensorPacketData  rawData[THERMISTANCE_AMOUNT];
-  }
-  packet;
+typedef struct {
+  TelecommunicationHeader header;
+  TemperatureSensorPacketData  rawData;
+}
+TemperatureSensorPacketFields;
 
-  uint8_t data[sizeof(packet)];
+typedef union {
+  TemperatureSensorPacketFields fields;
+
+  uint8_t data[sizeof(TemperatureSensorPacketFields)];
 }
 TemperatureSensorPacket;

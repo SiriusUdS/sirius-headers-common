@@ -7,15 +7,17 @@
 
 #define THERMOCOUPLE_AMOUNT 8
 
+typedef struct {
+  TelecommunicationHeader       header;
+
+  TelecommunicationErrorStatus  errorStatus;
+  TelecommunicationStatus       status;
+}
+TelecommunicationPacketFields;
+
 typedef union {
-  struct {
-    TelecommunicationHeader       header;
+  TelecommunicationPacketFields fields;
 
-    TelecommunicationErrorStatus  errorStatus;
-    TelecommunicationStatus       status;
-  }
-  packet;
-
-  uint8_t data[sizeof(packet)];
+  uint8_t data[sizeof(TelecommunicationPacketFields)];
 }
 TelecommunicationPacket;

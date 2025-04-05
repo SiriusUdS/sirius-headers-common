@@ -2,11 +2,8 @@
 
 #include <stdint.h>
 
-typedef enum {
-  VALVE_STATE_UNKNOWN,
-  VALVE_STATE_OPENED,
-  VALVE_STATE_CLOSED,
-  VALVE_STATE_OPENING,
-  VALVE_STATE_CLOSING
-}
-ValveState;
+#define VALVE_STATE_UNKNOWN (uint8_t)0x00
+#define VALVE_STATE_OPENED  (uint8_t)0x01
+#define VALVE_STATE_CLOSED  (uint8_t)0x02
+#define VALVE_STATE_OPENING (uint8_t)0x03
+#define VALVE_STATE_CLOSING (uint8_t)0x04

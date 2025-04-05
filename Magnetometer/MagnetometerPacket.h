@@ -8,28 +8,32 @@
 
 #define MAGNETOMETER_AMOUNT 2
 
+typedef struct {
+  MagnetometerData        data;
+
+  MagnetometerErrorStatus errorStatus;
+  MagnetometerStatus      status;
+
+  uint32_t                timeStamp_ms;
+}
+MagnetometerPacketDataMembers;
+
 typedef union {
-  struct {
-    MagnetometerData        data;
-
-    MagnetometerErrorStatus errorStatus;
-    MagnetometerStatus      status;
-
-    uint32_t                timeStamp_ms;
-  }
-  members;
+  MagnetometerPacketDataMembers members;
   
-  uint8_t values[sizeof(members)];
+  uint8_t values[sizeof(MagnetometerPacketDataMembers)];
 }
 MagnetometerPacketData;
 
-typedef union {
-  struct {
-    TelecommunicationHeader header;
-    MagnetometerData        rawData[MAGNETOMETER_AMOUNT];
-  }
-  packet;
+typedef struct {
+  TelecommunicationHeader header;
+  MagnetometerData        rawData[MAGNETOMETER_AMOUNT];
+}
+MagnetometerPacketFields;
 
-  uint8_t data[sizeof(packet)];
+typedef union {
+  MagnetometerPacketFields fields;
+
+  uint8_t data[sizeof(MagnetometerPacketFields)];
 }
 MagnetometerPacket;

@@ -7,26 +7,30 @@
 
 #define STORAGE_DEVICE_AMOUNT 2
 
-typedef union {
-  struct {
-    StorageErrorStatus  errorStatus;
-    StorageStatus       status;
+typedef struct {
+  StorageErrorStatus  errorStatus;
+  StorageStatus       status;
 
-    uint32_t            timeStamp_ms;
-  }
-  members;
+  uint32_t            timeStamp_ms;
+}
+StoragePacketDataMembers;
+
+typedef union {
+  StoragePacketDataMembers members;
   
-  uint8_t values[sizeof(members)];
+  uint8_t values[sizeof(StoragePacketDataMembers)];
 }
 StoragePacketData;
 
-typedef union {
-  struct {
-    TelecommunicationHeader   header;
-    StoragePacketData         rawData[STORAGE_DEVICE_AMOUNT];
-  }
-  packet;
+typedef struct {
+  TelecommunicationHeader   header;
+  StoragePacketData         rawData[STORAGE_DEVICE_AMOUNT];
+}
+StoragePacketFields;
 
-  uint8_t data[sizeof(packet)];
+typedef union {
+  StoragePacketFields fields;
+
+  uint8_t data[sizeof(StoragePacketFields)];
 }
 StoragePacket;

@@ -7,30 +7,32 @@
 
 #include "../Telecommunication/TelecommunicationHeader.h"
 
-#define THERMOCOUPLE_AMOUNT 8
+typedef struct {
+  ValveData data;
+
+  ValveErrorStatus errorStatus;
+  ValveStatus      status;
+
+  uint32_t timeStamp_ms;
+}
+ValvePacketDataMembers;
 
 typedef union {
-  struct {
-    ValveData data;
-
-    ValveErrorStatus errorStatus;
-    ValveStatus      status;
-
-    uint32_t timeStamp_ms;
-  }
-  members;
+  ValvePacketDataMembers members;
   
-  uint8_t values[sizeof(members)];
+  uint8_t values[sizeof(ValvePacketDataMembers)];
 }
 ValvePacketData;
 
-typedef union {
-  struct {
-    TelecommunicationHeader header;
-    ValvePacketData         rawData[THERMOCOUPLE_AMOUNT];
-  }
-  packet;
+typedef struct {
+  TelecommunicationHeader header;
+  ValvePacketData         rawData;
+}
+ValvePacketFields;
 
-  uint8_t data[sizeof(packet)];
+typedef union {
+  ValvePacketFields fields;
+
+  uint8_t data[sizeof(ValvePacketFields)];
 }
 ValvePacket;
