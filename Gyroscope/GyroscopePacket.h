@@ -6,8 +6,6 @@
 
 #include "../Telecommunication/TelecommunicationHeader.h"
 
-#define GYROSCOPE_AMOUNT 2
-
 typedef struct {
   GyroscopeAxis         data;
 
@@ -27,7 +25,7 @@ GyroscopeData;
 
 typedef struct {
   TelecommunicationHeader header;
-  GyroscopeData           rawData[GYROSCOPE_AMOUNT];
+  GyroscopeData           rawData;
 }
 GyroscopePacketFields;
 

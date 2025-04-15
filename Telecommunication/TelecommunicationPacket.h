@@ -5,8 +5,6 @@
 
 #include "TelecommunicationHeader.h"
 
-#define THERMOCOUPLE_AMOUNT 8
-
 typedef struct {
   TelecommunicationHeader       header;
 

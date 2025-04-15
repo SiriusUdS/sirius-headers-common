@@ -6,8 +6,6 @@
 
 #include "../Telecommunication/TelecommunicationHeader.h"
 
-#define MAGNETOMETER_AMOUNT 2
-
 typedef struct {
   MagnetometerData        data;
 
@@ -27,7 +25,7 @@ MagnetometerPacketData;
 
 typedef struct {
   TelecommunicationHeader header;
-  MagnetometerData        rawData[MAGNETOMETER_AMOUNT];
+  MagnetometerPacketData  rawData;
 }
 MagnetometerPacketFields;
 

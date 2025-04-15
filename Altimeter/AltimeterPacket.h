@@ -6,10 +6,6 @@
 
 #include "../Telecommunication/TelecommunicationHeader.h"
 
-#define ALTIMETER_DATA_SIZE_BYTE 8
-
-#define ACCELEROMETER_AMOUNT 1
-
 typedef struct {
   AltimeterData         data;
 
@@ -29,13 +25,13 @@ AltimeterPacketData;
 
 typedef struct {
   TelecommunicationHeader header;
-  AltimeterPacketData     rawData[ACCELEROMETER_AMOUNT];
+  AltimeterPacketData     rawData;
 }
-AccelerometerPacketFields;
+AltimeterPacketFields;
 
 typedef union {
-  AccelerometerPacketFields fields;
+  AltimeterPacketFields fields;
 
-  uint8_t data[sizeof(AccelerometerPacketFields)];
+  uint8_t data[sizeof(AltimeterPacketFields)];
 }
-AccelerometerPacket;
+AltimeterPacket;

@@ -5,8 +5,6 @@
 
 #include "../Telecommunication/TelecommunicationHeader.h"
 
-#define STORAGE_DEVICE_AMOUNT 2
-
 typedef struct {
   StorageErrorStatus  errorStatus;
   StorageStatus       status;
@@ -24,7 +22,7 @@ StoragePacketData;
 
 typedef struct {
   TelecommunicationHeader   header;
-  StoragePacketData         rawData[STORAGE_DEVICE_AMOUNT];
+  StoragePacketData         rawData;
 }
 StoragePacketFields;
 
