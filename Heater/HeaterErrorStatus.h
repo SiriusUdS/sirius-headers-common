@@ -13,4 +13,4 @@ typedef union {
   
   uint16_t value;
 }
-IgniterErrorStatus;
+HeaterErrorStatus;

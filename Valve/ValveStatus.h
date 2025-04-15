@@ -7,7 +7,8 @@ typedef union {
     uint16_t isIdle   : 1;
     uint16_t closedSwitchHigh : 1;
     uint16_t openedSwitchHigh : 1;
-    uint16_t RESERVED : 13;
+    uint16_t state : 3;
+    uint16_t RESERVED : 10;
   }
   bits;
 
