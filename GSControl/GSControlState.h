@@ -1,7 +1,7 @@
 #pragma once
 
 typedef enum {
-  GS_SAFETY_STATE_INIT,
-  GS_SAFETY_STATE_IDLE,
+  GS_CONTROL_STATE_INIT,
+  GS_CONTROL_STATE_IDLE
 }
 GSControlState;
