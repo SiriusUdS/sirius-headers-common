@@ -3,15 +3,20 @@
 /***************************************************/
 /***            Sensors/Devices Amount           ***/
 /***************************************************/
-#define FILL_STATION_THERMISTANCE_AMOUNT (uint8_t)0x04
-#define FILL_STATION_LOAD_CELL_AMOUNT    (uint8_t)0x02
-#define FILL_STATION_HEATPAD_AMOUNT      (uint8_t)0x04
-#define FILL_STATION_VALVE_AMOUNT        (uint8_t)0x02
+#define FILLING_STATION_THERMISTANCE_AMOUNT (uint8_t)0x04
+#define FILLING_STATION_LOAD_CELL_AMOUNT    (uint8_t)0x02
+#define FILLING_STATION_HEATPAD_AMOUNT      (uint8_t)0x04
+#define FILLING_STATION_VALVE_AMOUNT        (uint8_t)0x02
 
 /***************************************************/
 /***           Peripheral Distribution           ***/
 /***************************************************/
+#define FILLING_STATION_PWM_PER_VALVE (uint8_t)0x01
 
+#define FILLING_STATION_GPIO_PER_VALVE   (uint8_t)0x02
+
+#define FILLING_STATION_ADC_CHANNEL_PER_TEMPERATURE_SENSOR (uint8_t)0x01
+#define FILLING_STATION_ADC_CHANNEL_PER_PRESSURE_SENSOR    (uint8_t)0x01
 /***************************************************/
 /***              Peripheral Amount              ***/
 /***************************************************/
@@ -23,6 +28,9 @@
 /***************************************************/
 #define FILLING_STATION_NOS_VALVE_INDEX      (uint8_t)0x00
 #define FILLING_STATION_NOS_DUMP_VALVE_INDEX (uint8_t)0x01
+
+#define FILLING_STATION_NOS_VALVE_PWM_INDEX      (uint8_t)0x00
+#define FILLING_STATION_NOS_DUMP_VALVE_PWM_INDEX (uint8_t)0x01
 
 #define FILLING_STATION_FILL_VALVE_THERMISTANCE_INDEX    (uint8_t)0x00
 #define FILLING_STATION_QUICK_CONNECT_THERMISTANCE_INDEX (uint8_t)0x01
