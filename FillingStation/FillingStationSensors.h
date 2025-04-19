@@ -3,7 +3,7 @@
 /***************************************************/
 /***            Sensors/Devices Amount           ***/
 /***************************************************/
-#define FILLING_STATION_THEMPERATURE_SENSOR_AMOUNT (uint8_t)0x04
+#define FILLING_STATION_TEMPERATURE_SENSOR_AMOUNT (uint8_t)0x04
 #define FILLING_STATION_LOAD_CELL_AMOUNT           (uint8_t)0x02
 #define FILLING_STATION_PRESSURE_SENSOR_AMOUNT     (uint8_t)0x02
 #define FILLING_STATION_HEATPAD_AMOUNT             (uint8_t)0x04
@@ -20,7 +20,7 @@
 /***************************************************/
 /***              Peripheral Amount              ***/
 /***************************************************/
-#define FILLING_STATION_ADC_CHANNEL_AMOUNT FILLING_STATION_THEMPERATURE_SENSOR_AMOUNT + FILLING_STATION_LOAD_CELL_AMOUNT
+#define FILLING_STATION_ADC_CHANNEL_AMOUNT FILLING_STATION_TEMPERATURE_SENSOR_AMOUNT + FILLING_STATION_LOAD_CELL_AMOUNT
 #define FILLING_STATION_PWM_AMOUNT         FILLING_STATION_VALVE_AMOUNT
 #define FILLING_STATION_GPIO_AMOUNT        (FILLING_STATION_VALVE_AMOUNT * FILLING_STATION_GPIO_PER_VALVE)
 
