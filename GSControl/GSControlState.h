@@ -1,7 +1,5 @@
 #pragma once
 
-typedef enum {
-  GS_CONTROL_STATE_INIT,
-  GS_CONTROL_STATE_IDLE
-}
-GSControlState;
+#define GS_CONTROL_STATE_INIT    (uint8_t)0x00
+#define GS_CONTROL_STATE_IDLE    (uint8_t)0x01
+#define GS_CONTROL_STATE_ABORT   (uint8_t)0x02
