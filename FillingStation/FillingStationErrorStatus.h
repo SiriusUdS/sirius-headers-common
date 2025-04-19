@@ -12,4 +12,4 @@ typedef union {
   
   uint16_t value;
 }
-FillStationErrorStatus;
+FillingStationErrorStatus;
