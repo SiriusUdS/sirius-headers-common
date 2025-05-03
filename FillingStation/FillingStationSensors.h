@@ -5,11 +5,14 @@
 /***************************************************/
 /***            Sensors/Devices Amount           ***/
 /***************************************************/
-#define FILLING_STATION_TEMPERATURE_SENSOR_AMOUNT (uint8_t)0x04
+#define FILLING_STATION_TEMPERATURE_SENSOR_AMOUNT  (uint8_t)0x08
 #define FILLING_STATION_LOAD_CELL_AMOUNT           (uint8_t)0x02
 #define FILLING_STATION_PRESSURE_SENSOR_AMOUNT     (uint8_t)0x02
 #define FILLING_STATION_HEATPAD_AMOUNT             (uint8_t)0x04
 #define FILLING_STATION_VALVE_AMOUNT               (uint8_t)0x02
+
+#define FILLING_STATION_EXTERNAL_FLASH_AMOUNT (uint8_t)0x01
+#define FILLING_STATION_SD_CARD_AMOUNT        (uint8_t)0x01
 
 /***************************************************/
 /***           Peripheral Distribution           ***/
