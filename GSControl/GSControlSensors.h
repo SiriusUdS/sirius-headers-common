@@ -21,8 +21,14 @@
 /***       Array Indexes -- Sensors/Devices      ***/
 /***************************************************/
 #define GS_CONTROL_BUTTON_IGNITE_INDEX (uint8_t)0x00
+#define GS_CONTROL_BUTTON_IGNITE_INDEX (uint8_t)0x01
+#define GS_CONTROL_BUTTON_IGNITE_INDEX (uint8_t)0x02
+#define GS_CONTROL_BUTTON_IGNITE_INDEX (uint8_t)0x03
 
 /***************************************************/
 /***         Array Indexes -- Peripherals        ***/
 /***************************************************/
 #define GS_CONTROL_GPIO_BUTTON_IGNITE_INDEX (uint8_t)0x00
+#define GS_CONTROL_GPIO_BUTTON_IGNITE_INDEX (uint8_t)0x01
+#define GS_CONTROL_GPIO_BUTTON_IGNITE_INDEX (uint8_t)0x02
+#define GS_CONTROL_GPIO_BUTTON_IGNITE_INDEX (uint8_t)0x03
