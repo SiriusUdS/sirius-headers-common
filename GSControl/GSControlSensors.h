@@ -5,7 +5,7 @@
 /***************************************************/
 /***            Sensors/Devices Amount           ***/
 /***************************************************/
-#define GS_CONTROL_BUTTONS_AMOUT (uint8_t)0x04
+#define GS_CONTROL_BUTTON_AMOUNT (uint8_t)0x04
 
 /***************************************************/
 /***           Peripheral Distribution           ***/
@@ -20,9 +20,15 @@
 /***************************************************/
 /***       Array Indexes -- Sensors/Devices      ***/
 /***************************************************/
-#define GS_CONTROL_BUTTON_IGNITE_INDEX (uint8_t)0x00
+#define GS_CONTROL_BUTTON_1_INDEX (uint8_t)0x00
+#define GS_CONTROL_BUTTON_2_INDEX (uint8_t)0x01
+#define GS_CONTROL_BUTTON_3_INDEX (uint8_t)0x02
+#define GS_CONTROL_BUTTON_4_INDEX (uint8_t)0x03
 
 /***************************************************/
 /***         Array Indexes -- Peripherals        ***/
 /***************************************************/
-#define GS_CONTROL_GPIO_BUTTON_IGNITE_INDEX (uint8_t)0x00
+#define GS_CONTROL_GPIO_BUTTON_1_INDEX (uint8_t)0x00
+#define GS_CONTROL_GPIO_BUTTON_2_INDEX (uint8_t)0x01
+#define GS_CONTROL_GPIO_BUTTON_3_INDEX (uint8_t)0x02
+#define GS_CONTROL_GPIO_BUTTON_4_INDEX (uint8_t)0x03
