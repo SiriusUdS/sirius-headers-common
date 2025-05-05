@@ -11,8 +11,9 @@
 #define FILLING_STATION_HEATPAD_AMOUNT             (uint8_t)0x04
 #define FILLING_STATION_VALVE_AMOUNT               (uint8_t)0x02
 
-#define FILLING_STATION_EXTERNAL_FLASH_AMOUNT (uint8_t)0x01
-#define FILLING_STATION_SD_CARD_AMOUNT        (uint8_t)0x01
+#define FILLING_STATION_EXTERNAL_FLASH_AMOUNT     (uint8_t)0x01
+#define FILLING_STATION_SD_CARD_AMOUNT            (uint8_t)0x01
+#define FILLING_STATION_TELECOMMUNICATION_AMNOUNT (uint8_t)0x01
 
 /***************************************************/
 /***           Peripheral Distribution           ***/

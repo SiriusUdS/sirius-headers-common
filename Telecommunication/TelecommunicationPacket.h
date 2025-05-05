@@ -3,13 +3,13 @@
 #include "TelecommunicationStatus.h"
 #include "TelecommunicationErrorStatus.h"
 
-#include "TelecommunicationHeader.h"
+#include "TelemetryHeader.h"
 
 typedef struct {
-  TelecommunicationHeader       header;
+  TelemetryHeader header;
 
-  TelecommunicationErrorStatus  errorStatus;
-  TelecommunicationStatus       status;
+  TelecommunicationErrorStatus errorStatus;
+  TelecommunicationStatus      status;
 }
 TelecommunicationPacketFields;
 

@@ -21,8 +21,9 @@
 #define TELEMETRY_TEMPERATURE_SENSOR_SENSOR_ID (uint8_t)0x00
 
 typedef struct {
-  uint32_t headerCode : 24;
-  uint32_t sourceId   : 3;
-  uint32_t sensorId   : 5;
+  uint32_t type        : 20;
+  uint32_t sensorType  : 4;
+  uint32_t boardId     : 3;
+  uint32_t sensorIndex : 5;
 }
 TelemetryHeader;
