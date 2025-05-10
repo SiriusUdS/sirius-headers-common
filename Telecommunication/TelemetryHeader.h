@@ -2,8 +2,6 @@
 
 #include <stdint.h>
 
-#define TELEMETRY_DATA_HEADER_CODE 0xB256BE // If performance permits (rnd)
-
 #define TELEMETRY_ACCELEROMETER_DATA_HEADER_CODE      (uint8_t)0x414343 // "ACC"
 #define TELEMETRY_GYROSCOPE_DATA_HEADER_CODE          (uint8_t)0x475952 // "GYR"
 #define TELEMETRY_ALTIMETER_DATA_HEADER_CODE          (uint8_t)0x414C54 // "ALT"
