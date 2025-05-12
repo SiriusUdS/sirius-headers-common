@@ -4,7 +4,7 @@
 #include "GyroscopeStatus.h"
 #include "GyroscopeErrorStatus.h"
 
-#include "../Telecommunication/TelecommunicationHeader.h"
+#include "../Telecommunication/TelemetryHeader.h"
 
 typedef struct {
   GyroscopeAxis         data;
@@ -24,7 +24,7 @@ typedef union {
 GyroscopeData;
 
 typedef struct {
-  TelecommunicationHeader header;
+  TelemetryHeader header;
   GyroscopeData           rawData;
 }
 GyroscopePacketFields;

@@ -4,7 +4,7 @@
 #include "PressureSensorStatus.h"
 #include "PressureSensorErrorStatus.h"
 
-#include "../Telecommunication/TelecommunicationHeader.h"
+#include "../Telecommunication/TelemetryHeader.h"
 
 typedef struct {
   PressureSensorData data;
@@ -24,7 +24,7 @@ typedef union {
 PressureSensorPacketData;
 
 typedef struct {
-  TelecommunicationHeader   header;
+  TelemetryHeader   header;
   PressureSensorPacketData  rawData;
 }
 PressureSensorPacketFields;

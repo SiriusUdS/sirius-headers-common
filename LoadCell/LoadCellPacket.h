@@ -4,7 +4,7 @@
 #include "LoadCellStatus.h"
 #include "LoadCellErrorStatus.h"
 
-#include "../Telecommunication/TelecommunicationHeader.h"
+#include "../Telecommunication/TelemetryHeader.h"
 
 typedef struct {
   LoadCellData    data;
@@ -24,7 +24,7 @@ typedef union {
 LoadCellPacketData;
 
 typedef struct {
-  TelecommunicationHeader header;
+  TelemetryHeader header;
   LoadCellPacketData      rawData;
 }
 LoadCellPacketFields;

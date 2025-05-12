@@ -3,7 +3,7 @@
 #include "ButtonStatus.h"
 #include "ButtonErrorStatus.h"
 
-#include "../Telecommunication/TelecommunicationHeader.h"
+#include "../Telecommunication/TelemetryHeader.h"
 
 typedef struct {
   ButtonErrorStatus errorStatus;
@@ -21,7 +21,7 @@ typedef union {
 ButtonPacketData;
 
 typedef struct {
-  TelecommunicationHeader header;
+  TelemetryHeader header;
   ButtonPacketData      rawData;
 }
 ButtonPacketFields;

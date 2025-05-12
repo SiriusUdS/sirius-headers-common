@@ -3,7 +3,7 @@
 #include "HeaterStatus.h"
 #include "HeaterErrorStatus.h"
 
-#include "../Telecommunication/TelecommunicationHeader.h"
+#include "../Telecommunication/TelemetryHeader.h"
 
 typedef struct {
   HeaterErrorStatus errorStatus;
@@ -21,7 +21,7 @@ typedef union {
 HeaterPacketData;
 
 typedef struct {
-  TelecommunicationHeader header;
+  TelemetryHeader header;
   HeaterPacketData      rawData;
 }
 HeaterPacketFields;

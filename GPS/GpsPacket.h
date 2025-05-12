@@ -4,7 +4,7 @@
 #include "GPSStatus.h"
 #include "GPSErrorStatus.h"
 
-#include "../Telecommunication/TelecommunicationHeader.h"
+#include "../Telecommunication/TelemetryHeader.h"
 
 typedef struct {
   GpsData         data;
@@ -24,7 +24,7 @@ typedef union {
 GpsPacketData;
 
 typedef struct {
-  TelecommunicationHeader header;
+  TelemetryHeader header;
   GpsPacketData           rawData;
 }
 GpsPacketFields;

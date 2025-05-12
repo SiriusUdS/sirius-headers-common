@@ -7,7 +7,7 @@
 #include "../Engine/EngineSensors.h"
 #include "../FillingStation/FillingStationSensors.h"
 
-#include "../Telecommunication/TelecommunicationHeader.h"
+#include "../Telecommunication/TelemetryHeader.h"
 
 typedef struct {
   TemperatureSensorData data;
@@ -18,7 +18,7 @@ typedef struct {
 TemperatureSensorPacketData;
 
 typedef struct {
-  TelecommunicationHeader     header;
+  TelemetryHeader     header;
   TemperatureSensorPacketData rawData;
 
   uint32_t timeStamp_ms;
@@ -37,7 +37,7 @@ TemperatureSensorPacket;
 /***************************************************/
 
 typedef struct {
-  TelecommunicationHeader     header;
+  TelemetryHeader     header;
   TemperatureSensorPacketData rawData[ENGINE_TEMPERATURE_SENSOR_AMOUNT];
 
   uint32_t timeStamp_ms;
@@ -56,7 +56,7 @@ TemperatureSensorEnginePacket;
 /***************************************************/
 
 typedef struct {
-  TelecommunicationHeader     header;
+  TelemetryHeader     header;
   TemperatureSensorPacketData rawData[FILLING_STATION_TEMPERATURE_SENSOR_AMOUNT];
 
   uint32_t timeStamp_ms;
