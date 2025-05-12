@@ -3,7 +3,7 @@
 #include "StorageStatus.h"
 #include "StorageErrorStatus.h"
 
-#include "../Telecommunication/TelecommunicationHeader.h"
+#include "../Telecommunication/TelemetryHeader.h"
 
 typedef struct {
   StorageErrorStatus  errorStatus;
@@ -21,7 +21,7 @@ typedef union {
 StoragePacketData;
 
 typedef struct {
-  TelecommunicationHeader   header;
+  TelemetryHeader   header;
   StoragePacketData         rawData;
 }
 StoragePacketFields;

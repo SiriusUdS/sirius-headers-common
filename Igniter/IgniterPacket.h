@@ -3,7 +3,7 @@
 #include "IgniterStatus.h"
 #include "IgniterErrorStatus.h"
 
-#include "../Telecommunication/TelecommunicationHeader.h"
+#include "../Telecommunication/TelemetryHeader.h"
 
 typedef struct {
   IgniterErrorStatus errorStatus;
@@ -21,7 +21,7 @@ typedef union {
 IgniterPacketData;
 
 typedef struct {
-  TelecommunicationHeader header;
+  TelemetryHeader header;
   IgniterPacketData      rawData;
 }
 IgniterPacketFields;

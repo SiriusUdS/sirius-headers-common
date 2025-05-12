@@ -4,7 +4,7 @@
 #include "MagnetometerStatus.h"
 #include "MagnetometerErrorStatus.h"
 
-#include "../Telecommunication/TelecommunicationHeader.h"
+#include "../Telecommunication/TelemetryHeader.h"
 
 typedef struct {
   MagnetometerData        data;
@@ -24,7 +24,7 @@ typedef union {
 MagnetometerPacketData;
 
 typedef struct {
-  TelecommunicationHeader header;
+  TelemetryHeader header;
   MagnetometerPacketData  rawData;
 }
 MagnetometerPacketFields;

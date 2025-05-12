@@ -4,7 +4,7 @@
 #include "AltimeterStatus.h"
 #include "AltimeterErrorStatus.h"
 
-#include "../Telecommunication/TelecommunicationHeader.h"
+#include "../Telecommunication/TelemetryHeader.h"
 
 typedef struct {
   AltimeterData         data;
@@ -24,7 +24,7 @@ typedef union {
 AltimeterPacketData;
 
 typedef struct {
-  TelecommunicationHeader header;
+  TelemetryHeader header;
   AltimeterPacketData     rawData;
 }
 AltimeterPacketFields;

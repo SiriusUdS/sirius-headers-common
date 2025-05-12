@@ -3,7 +3,7 @@
 #include "ValveStatus.h"
 #include "ValveErrorStatus.h"
 
-#include "../Telecommunication/TelecommunicationHeader.h"
+#include "../Telecommunication/TelemetryHeader.h"
 
 typedef struct {
   ValveErrorStatus errorStatus;
@@ -21,7 +21,7 @@ typedef union {
 ValvePacketData;
 
 typedef struct {
-  TelecommunicationHeader header;
+  TelemetryHeader header;
   ValvePacketData         rawData;
 }
 ValvePacketFields;

@@ -4,7 +4,7 @@
 #include "AccelerometerStatus.h"
 #include "AccelerometerErrorStatus.h"
 
-#include "../Telecommunication/TelecommunicationHeader.h"
+#include "../Telecommunication/TelemetryHeader.h"
 
 typedef struct {
   AccelerometerData         data;
@@ -23,7 +23,7 @@ typedef union {
 AccelerometerPacketData;
 
 typedef struct {
-  TelecommunicationHeader header;
+  TelemetryHeader header;
   AccelerometerPacketData rawData;
 }
 AccelerometerPacketFields;
