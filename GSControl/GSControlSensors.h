@@ -20,7 +20,7 @@
 /***************************************************/
 /***       Array Indexes -- Sensors/Devices      ***/
 /***************************************************/
-#define GS_CONTROL_BUTTON_NOT_SAFE_INDEX (uint8_t)0x00 //nom à modifier
+#define GS_CONTROL_BUTTON_SAFE_INDEX (uint8_t)0x00 
 #define GS_CONTROL_BUTTON_FIRE_IGNITER_INDEX (uint8_t)0x01
 #define GS_CONTROL_BUTTON_ENABLE_FILL_INDEX (uint8_t)0x02
 #define GS_CONTROL_BUTTON_BACKUP_INDEX (uint8_t)0x03
@@ -31,7 +31,7 @@
 /***************************************************/
 /***         Array Indexes -- Peripherals        ***/
 /***************************************************/
-#define GS_CONTROL_GPIO_NOT_SAFE_INDEX (uint8_t)0x00 //nom à modifier
+#define GS_CONTROL_GPIO_SAFE_INDEX (uint8_t)0x00
 #define GS_CONTROL_GPIO_FIRE_IGNITER_INDEX (uint8_t)0x01
 #define GS_CONTROL_GPIO_ENABLE_FILL_INDEX (uint8_t)0x02
 #define GS_CONTROL_GPIO_BACKUP_INDEX (uint8_t)0x03
