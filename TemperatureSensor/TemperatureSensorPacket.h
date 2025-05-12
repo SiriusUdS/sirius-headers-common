@@ -4,6 +4,9 @@
 #include "TemperatureSensorStatus.h"
 #include "TemperatureSensorErrorStatus.h"
 
+#include "../Engine/EngineSensors.h"
+#include "../FillingStation/FillingStationSensors.h"
+
 #include "../Telecommunication/TelecommunicationHeader.h"
 
 typedef struct {
@@ -11,21 +14,14 @@ typedef struct {
 
   TemperatureSensorErrorStatus errorStatus;
   TemperatureSensorStatus      status;
-
-  uint32_t timeStamp_ms;
-}
-TemperatureSensorPacketDataMembers;
-
-typedef union {
-  TemperatureSensorPacketDataMembers members;
-  
-  uint8_t values[sizeof(TemperatureSensorPacketDataMembers)];
 }
 TemperatureSensorPacketData;
 
 typedef struct {
-  TelecommunicationHeader header;
-  TemperatureSensorPacketData  rawData;
+  TelecommunicationHeader     header;
+  TemperatureSensorPacketData rawData;
+
+  uint32_t timeStamp_ms;
 }
 TemperatureSensorPacketFields;
 
@@ -35,3 +31,41 @@ typedef union {
   uint8_t data[sizeof(TemperatureSensorPacketFields)];
 }
 TemperatureSensorPacket;
+
+/***************************************************/
+/***             Engine - 8 Sensors              ***/
+/***************************************************/
+
+typedef struct {
+  TelecommunicationHeader     header;
+  TemperatureSensorPacketData rawData[ENGINE_TEMPERATURE_SENSOR_AMOUNT];
+
+  uint32_t timeStamp_ms;
+}
+TemperatureSensorEnginePacketFields;
+
+typedef union {
+  TemperatureSensorEnginePacketFields fields;
+
+  uint8_t data[sizeof(TemperatureSensorEnginePacketFields)];
+}
+TemperatureSensorEnginePacket;
+
+/***************************************************/
+/***         Filling Station - 8 Sensors         ***/
+/***************************************************/
+
+typedef struct {
+  TelecommunicationHeader     header;
+  TemperatureSensorPacketData rawData[FILLING_STATION_TEMPERATURE_SENSOR_AMOUNT];
+
+  uint32_t timeStamp_ms;
+}
+TemperatureSensorFillingStationPacketFields;
+
+typedef union {
+  TemperatureSensorFillingStationPacketFields fields;
+
+  uint8_t data[sizeof(TemperatureSensorFillingStationPacketFields)];
+}
+TemperatureSensorFillingStationPacket;

@@ -5,11 +5,11 @@
 /***************************************************/
 /***            Sensors/Devices Amount           ***/
 /***************************************************/
-#define ENGINE_VALVE_AMOUNT             (uint8_t)0x02
-#define ENGINE_TELECOMMUNICATION_AMOUNT (uint8_t)0x01
-#define ENGINE_THERMISTANCE_AMOUNT      (uint8_t)0x08
-#define ENGINE_PRESSURE_SENSOR_AMOUNT   (uint8_t)0x02
-#define ENGINE_IGNITER_AMOUNT           (uint8_t)0x02
+#define ENGINE_VALVE_AMOUNT              (uint8_t)0x02
+#define ENGINE_TELECOMMUNICATION_AMOUNT  (uint8_t)0x01
+#define ENGINE_TEMPERATURE_SENSOR_AMOUNT (uint8_t)0x08
+#define ENGINE_PRESSURE_SENSOR_AMOUNT    (uint8_t)0x02
+#define ENGINE_IGNITER_AMOUNT            (uint8_t)0x02
 
 #define ENGINE_EXTERNAL_FLASH_AMOUNT (uint8_t)0x01
 #define ENGINE_SD_CARD_AMOUNT        (uint8_t)0x01

@@ -32,3 +32,8 @@ typedef union {
   uint8_t data[sizeof(ValvePacketFields)];
 }
 ValvePacket;
+
+/***************************************************/
+/***              Engine - 2 Valves              ***/
+/***************************************************/
+
