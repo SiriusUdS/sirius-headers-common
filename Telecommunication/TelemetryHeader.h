@@ -18,10 +18,15 @@
 
 #define TELEMETRY_TEMPERATURE_SENSOR_SENSOR_ID (uint8_t)0x00
 
-typedef struct {
-  uint32_t type        : 20;
-  uint32_t sensorType  : 4;
-  uint32_t boardId     : 3;
-  uint32_t sensorIndex : 5;
+typedef union {
+  struct {
+    uint32_t type        : 20;
+    uint32_t sensorType  : 4;
+    uint32_t boardId     : 3;
+    uint32_t sensorIndex : 5;
+  }
+  bits;
+
+  uint32_t value;
 }
 TelemetryHeader;

@@ -5,10 +5,15 @@
 #define COMMAND_RESPONSE_TYPE_CODE 0x52535
 
 typedef union {
-  uint32_t type         : 20;
-  uint32_t commandIndex : 4;
-  uint32_t boardId      : 3;
-  uint32_t response     : 5;
+  struct {
+    uint32_t type         : 20;
+    uint32_t commandIndex : 4;
+    uint32_t boardId      : 3;
+    uint32_t response     : 5;
+  }
+  bits;
+
+  uint32_t value;
 }
 CommandResponseHeader;
 
