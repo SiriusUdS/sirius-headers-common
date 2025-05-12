@@ -11,18 +11,12 @@ typedef struct {
 
   uint32_t timeStamp_ms;
 }
-ButtonPacketDataMembers;
-
-typedef union {
-  ButtonPacketDataMembers members;
-  
-  uint8_t values[sizeof(ButtonPacketDataMembers)];
-}
 ButtonPacketData;
 
 typedef struct {
-  TelemetryHeader header;
-  ButtonPacketData      rawData;
+  TelemetryHeader  header;
+  ButtonPacketData rawData;
+  uint32_t         crc;
 }
 ButtonPacketFields;
 

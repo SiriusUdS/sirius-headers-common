@@ -9,20 +9,14 @@ typedef struct {
   StorageErrorStatus  errorStatus;
   StorageStatus       status;
 
-  uint32_t            timeStamp_ms;
-}
-StoragePacketDataMembers;
-
-typedef union {
-  StoragePacketDataMembers members;
-  
-  uint8_t values[sizeof(StoragePacketDataMembers)];
+  uint32_t timeStamp_ms;
 }
 StoragePacketData;
 
 typedef struct {
   TelemetryHeader   header;
-  StoragePacketData         rawData;
+  StoragePacketData rawData;
+  uint32_t          crc;
 }
 StoragePacketFields;
 

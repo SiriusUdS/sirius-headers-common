@@ -7,25 +7,19 @@
 #include "../Telecommunication/TelemetryHeader.h"
 
 typedef struct {
-  GpsData         data;
+  GpsData data;
 
-  GPSErrorStatus  errorStatus;
-  GpsStatus       status;
+  GPSErrorStatus errorStatus;
+  GpsStatus      status;
 
-  uint32_t        timeStamp_ms;
-}
-GpsPacketDataMembers;
-
-typedef union {
-  GpsPacketDataMembers members;
-  
-  uint8_t values[sizeof(GpsPacketDataMembers)];
+  uint32_t timeStamp_ms;
 }
 GpsPacketData;
 
 typedef struct {
   TelemetryHeader header;
-  GpsPacketData           rawData;
+  GpsPacketData   rawData;
+  uint32_t        crc;
 }
 GpsPacketFields;
 

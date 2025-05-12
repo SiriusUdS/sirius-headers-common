@@ -18,7 +18,7 @@ typedef struct {
 TemperatureSensorPacketData;
 
 typedef struct {
-  TelemetryHeader     header;
+  TelemetryHeader             header;
   TemperatureSensorPacketData rawData;
 
   uint32_t timeStamp_ms;
@@ -37,10 +37,11 @@ TemperatureSensorPacket;
 /***************************************************/
 
 typedef struct {
-  TelemetryHeader     header;
+  TelemetryHeader             header;
   TemperatureSensorPacketData rawData[ENGINE_TEMPERATURE_SENSOR_AMOUNT];
 
   uint32_t timeStamp_ms;
+  uint32_t crc;
 }
 TemperatureSensorEnginePacketFields;
 
@@ -56,10 +57,11 @@ TemperatureSensorEnginePacket;
 /***************************************************/
 
 typedef struct {
-  TelemetryHeader     header;
+  TelemetryHeader             header;
   TemperatureSensorPacketData rawData[FILLING_STATION_TEMPERATURE_SENSOR_AMOUNT];
 
   uint32_t timeStamp_ms;
+  uint32_t crc;
 }
 TemperatureSensorFillingStationPacketFields;
 

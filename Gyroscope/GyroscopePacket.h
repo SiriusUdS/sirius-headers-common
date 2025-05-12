@@ -7,25 +7,19 @@
 #include "../Telecommunication/TelemetryHeader.h"
 
 typedef struct {
-  GyroscopeAxis         data;
+  GyroscopeAxis data;
 
-  GyroscopeErrorStatus  errorStatus;
-  GyroscopeStatus       status;
+  GyroscopeErrorStatus errorStatus;
+  GyroscopeStatus      status;
 
-  uint32_t              timeStamp_ms;
-}
-GyroscopeDataMembers;
-
-typedef union {
-  GyroscopeDataMembers members;
-  
-  uint8_t values[sizeof(GyroscopeDataMembers)];
+  uint32_t timeStamp_ms;
 }
 GyroscopeData;
 
 typedef struct {
   TelemetryHeader header;
-  GyroscopeData           rawData;
+  GyroscopeData   rawData;
+  uint32_t        crc;
 }
 GyroscopePacketFields;
 

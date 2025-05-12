@@ -7,25 +7,19 @@
 #include "../Telecommunication/TelemetryHeader.h"
 
 typedef struct {
-  MagnetometerData        data;
+  MagnetometerData data;
 
   MagnetometerErrorStatus errorStatus;
   MagnetometerStatus      status;
 
-  uint32_t                timeStamp_ms;
-}
-MagnetometerPacketDataMembers;
-
-typedef union {
-  MagnetometerPacketDataMembers members;
-  
-  uint8_t values[sizeof(MagnetometerPacketDataMembers)];
+  uint32_t timeStamp_ms;
 }
 MagnetometerPacketData;
 
 typedef struct {
-  TelemetryHeader header;
-  MagnetometerPacketData  rawData;
+  TelemetryHeader        header;
+  MagnetometerPacketData rawData;
+  uint32_t               crc;
 }
 MagnetometerPacketFields;
 

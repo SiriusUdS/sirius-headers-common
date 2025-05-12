@@ -11,21 +11,15 @@ typedef struct {
 
   AltimeterErrorStatus  errorStatus;
   AltimeterStatus       status;
-  uint32_t              timeStamp_ms;
-}
-AltimeterPacketDataMembers;
 
-
-typedef union {
-  AltimeterPacketDataMembers members;
-  
-  uint8_t values[sizeof(AltimeterPacketDataMembers)];
+  uint32_t timeStamp_ms;
 }
 AltimeterPacketData;
 
 typedef struct {
-  TelemetryHeader header;
-  AltimeterPacketData     rawData;
+  TelemetryHeader     header;
+  AltimeterPacketData rawData;
+  uint32_t            crc;
 }
 AltimeterPacketFields;
 

@@ -14,18 +14,12 @@ typedef struct {
 
   uint32_t timeStamp_ms;
 }
-PressureSensorDataMembers;
-
-typedef union {
-  PressureSensorDataMembers members;
-  
-  uint8_t values[sizeof(PressureSensorDataMembers)];
-}
-PressureSensorPacketData;
+PressureSensorData;
 
 typedef struct {
-  TelemetryHeader   header;
-  PressureSensorPacketData  rawData;
+  TelemetryHeader    header;
+  PressureSensorData rawData;
+  uint32_t           crc;
 }
 PressureSensorPacketFields;
 

@@ -7,24 +7,19 @@
 #include "../Telecommunication/TelemetryHeader.h"
 
 typedef struct {
-  AccelerometerData         data;
+  AccelerometerData data;
 
   AccelerometerErrorStatus  errorStatus;
   AccelerometerStatus       status;
-  uint32_t                  timeStamp_ms;
-}
-AccelerometerDataMembers;
 
-typedef union {
-  AccelerometerDataMembers members;
-  
-  uint8_t values[sizeof(AccelerometerDataMembers)];
+  uint32_t timeStamp_ms;
 }
 AccelerometerPacketData;
 
 typedef struct {
-  TelemetryHeader header;
+  TelemetryHeader         header;
   AccelerometerPacketData rawData;
+  uint32_t                crc;
 }
 AccelerometerPacketFields;
 

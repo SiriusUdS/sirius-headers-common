@@ -11,18 +11,11 @@ typedef struct {
 
   uint32_t timeStamp_ms;
 }
-ValvePacketDataMembers;
-
-typedef union {
-  ValvePacketDataMembers members;
-  
-  uint8_t values[sizeof(ValvePacketDataMembers)];
-}
 ValvePacketData;
 
 typedef struct {
   TelemetryHeader header;
-  ValvePacketData         rawData;
+  ValvePacketData rawData;
 }
 ValvePacketFields;
 

@@ -9,20 +9,14 @@ typedef struct {
   IgniterErrorStatus errorStatus;
   IgniterStatus      status;
 
-  uint32_t              timeStamp_ms;
-}
-IgniterPacketDataMembers;
-
-typedef union {
-  IgniterPacketDataMembers members;
-  
-  uint8_t values[sizeof(IgniterPacketDataMembers)];
+  uint32_t timeStamp_ms;
 }
 IgniterPacketData;
 
 typedef struct {
-  TelemetryHeader header;
-  IgniterPacketData      rawData;
+  TelemetryHeader   header;
+  IgniterPacketData rawData;
+  uint32_t          crc;
 }
 IgniterPacketFields;
 

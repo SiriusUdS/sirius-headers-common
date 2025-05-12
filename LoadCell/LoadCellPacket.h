@@ -7,25 +7,19 @@
 #include "../Telecommunication/TelemetryHeader.h"
 
 typedef struct {
-  LoadCellData    data;
+  LoadCellData data;
 
   LoadCellErrorStatus errorStatus;
   LoadCellStatus      status;
 
-  uint32_t              timeStamp_ms;
-}
-LoadCellPacketDataMembers;
-
-typedef union {
-  LoadCellPacketDataMembers members;
-  
-  uint8_t values[sizeof(LoadCellPacketDataMembers)];
+  uint32_t timeStamp_ms;
 }
 LoadCellPacketData;
 
 typedef struct {
-  TelemetryHeader header;
-  LoadCellPacketData      rawData;
+  TelemetryHeader    header;
+  LoadCellPacketData rawData;
+  uint32_t           crc;
 }
 LoadCellPacketFields;
 

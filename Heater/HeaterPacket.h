@@ -9,20 +9,14 @@ typedef struct {
   HeaterErrorStatus errorStatus;
   HeaterStatus      status;
 
-  uint32_t              timeStamp_ms;
-}
-HeaterPacketDataMembers;
-
-typedef union {
-  HeaterPacketDataMembers members;
-  
-  uint8_t values[sizeof(HeaterPacketDataMembers)];
+  uint32_t timeStamp_ms;
 }
 HeaterPacketData;
 
 typedef struct {
-  TelemetryHeader header;
-  HeaterPacketData      rawData;
+  TelemetryHeader  header;
+  HeaterPacketData rawData;
+  uint32_t         crc;
 }
 HeaterPacketFields;
 
