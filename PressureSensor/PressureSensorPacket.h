@@ -14,12 +14,12 @@ typedef struct {
 
   uint32_t timeStamp_ms;
 }
-PressureSensorData;
+PressureSensorPacketData;
 
 typedef struct {
-  TelemetryHeader    header;
-  PressureSensorData rawData;
-  uint32_t           crc;
+  TelemetryHeader          header;
+  PressureSensorPacketData rawData;
+  uint32_t                 crc;
 }
 PressureSensorPacketFields;
 
