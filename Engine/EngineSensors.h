@@ -10,7 +10,7 @@
 #define ENGINE_TEMPERATURE_SENSOR_AMOUNT (uint8_t)0x08
 #define ENGINE_PRESSURE_SENSOR_AMOUNT    (uint8_t)0x02
 #define ENGINE_IGNITER_AMOUNT            (uint8_t)0x02
-#define ENGINE_STORAGE_AMOUNT            (uint8_t)0x01
+#define ENGINE_STORAGE_AMOUNT            (uint8_t)0x02
 
 /***************************************************/
 /***           Peripheral Distribution           ***/
@@ -65,8 +65,8 @@
 #define ENGINE_IPA_VALVE_CLOSED_GPIO_INDEX (uint8_t)0x04
 #define ENGINE_IPA_VALVE_OPENED_GPIO_INDEX (uint8_t)0x05
 
-#define ENGINE_STORAGE_SD_CARD_INDEX       (uint8_t)0x00
-#define ENGINE_STORAGE_EXTERNAL_TANK_INDEX (uint8_t)0x01
+#define ENGINE_STORAGE_SD_CARD_INDEX        (uint8_t)0x00
+#define ENGINE_STORAGE_EXTERNAL_FLASH_INDEX (uint8_t)0x01
 
 // CHECK IF GOOD
 #define ENGINE_COMBUSTION_CHAMBER_1_THERMISTANCE_ADC_CHANNEL_INDEX    (uint8_t)0x00
