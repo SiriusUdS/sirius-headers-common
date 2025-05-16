@@ -4,9 +4,10 @@
 
 typedef union {
   struct {
-    uint16_t isTestMode : 1;
-    uint16_t isUsbMode : 1;
-    uint16_t RESERVED : 14;
+    uint16_t testModeOn : 1;
+    uint16_t usbModeOn : 1;
+    uint16_t fastModeOn : 1;
+    uint16_t RESERVED : 13;
   }
   bits;
   uint16_t value;
