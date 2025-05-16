@@ -19,6 +19,7 @@ BoardCommandHeader;
 
 typedef struct {
   BoardCommandHeader header;
+  uint32_t           value;
   uint32_t           crc;
 }
 BoardCommandFields;
