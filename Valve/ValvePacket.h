@@ -16,6 +16,7 @@ ValvePacketData;
 typedef struct {
   TelemetryHeader header;
   ValvePacketData rawData;
+  uint32_t crc;
 }
 ValvePacketFields;
 

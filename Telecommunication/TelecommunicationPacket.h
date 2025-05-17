@@ -8,6 +8,8 @@
 typedef struct {
   TelecommunicationErrorStatus errorStatus;
   TelecommunicationStatus      status;
+
+  uint32_t timestamp_ms;
 }
 TelecommunicationPacketData;
 

@@ -14,6 +14,8 @@ typedef struct {
 
   TemperatureSensorErrorStatus errorStatus;
   TemperatureSensorStatus      status;
+
+  uint32_t timeStamp_ms;
 }
 TemperatureSensorPacketData;
 
@@ -21,7 +23,7 @@ typedef struct {
   TelemetryHeader             header;
   TemperatureSensorPacketData rawData;
 
-  uint32_t timeStamp_ms;
+  uint32_t crc;
 }
 TemperatureSensorPacketFields;
 
