@@ -15,7 +15,7 @@
 /***************************************************/
 /***              Peripheral Amount              ***/
 /***************************************************/
-#define GS_CONTROL_GPIO_AMOUNT GS_CONTROL_BUTTONS_AMOUNT * GS_CONTROL_GPIO_PER_BUTTONS
+#define GS_CONTROL_GPIO_AMOUNT GS_CONTROL_BUTTON_AMOUNT * GS_CONTROL_GPIO_PER_BUTTONS
 
 /***************************************************/
 /***       Array Indexes -- Sensors/Devices      ***/
