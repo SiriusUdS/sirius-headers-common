@@ -4,7 +4,16 @@
 
 typedef union {
   struct {
-    uint16_t RESERVED : 16;
+    uint16_t RESERVED : 9;
+
+    uint16_t isAllowFillSwitchOn : 1;
+    uint16_t isArmServoSwitchOn : 1;
+    uint16_t isArmIgniterSwitchOn : 1;
+
+    uint16_t isUnusedSwitchOn : 1;
+    uint16_t isEmergencyStopButtonPressed : 1;
+    uint16_t isFireIgniterButtonPressed : 1;
+    uint16_t isUnsafeKeySwitchPressed : 1;
   }
   bits;
   uint16_t value;
