@@ -4,7 +4,9 @@
 
 typedef union {
   struct {
-    uint16_t RESERVED : 9;
+    uint16_t RESERVED : 3;
+
+    uint16_t state : 6;
 
     uint16_t isAllowFillSwitchOn : 1;
     uint16_t isArmServoSwitchOn : 1;
@@ -16,6 +18,7 @@ typedef union {
     uint16_t isUnsafeKeySwitchPressed : 1;
   }
   bits;
+
   uint16_t value;
 }
 GSControlStatus;
