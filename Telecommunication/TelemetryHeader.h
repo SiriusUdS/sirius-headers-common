@@ -16,8 +16,8 @@
 #define TELEMETRY_FILLING_STATION_BOARD_ID (uint8_t)0x01
 #define TELEMETRY_GS_CONTROL_BOARD_ID      (uint8_t)0x02
 
-#define TELEMETRY_HEADER_TYPE_TELEMETRY (uint32_t)0x54454 // TEL
-#define TELEMETRY_HEADER_TYPE_STATUS    (uint32_t)0x53544 // STA
+#define TELEMETRY_TYPE_CODE (uint32_t)0x54454 // TEL
+#define STATUS_TYPE_CODE    (uint32_t)0x53544 // STA
 
 typedef union {
   struct {
