@@ -16,13 +16,14 @@
 #define TELEMETRY_FILLING_STATION_BOARD_ID (uint8_t)0x01
 #define TELEMETRY_GS_CONTROL_BOARD_ID      (uint8_t)0x02
 
-#define TELEMETRY_HEADER_TYPE_TELEMETRY (uint32_t)0x54454C5 // TELY
-#define TELEMETRY_HEADER_TYPE_STATUS    (uint32_t)0x5354415 // STAU
+#define TELEMETRY_HEADER_TYPE_TELEMETRY (uint32_t)0x54454 // TEL
+#define TELEMETRY_HEADER_TYPE_STATUS    (uint32_t)0x53544 // STA
 
 typedef union {
   struct {
-    uint32_t type        : 28;
+    uint32_t type        : 20;
     uint32_t boardId     : 4;
+    uint32_t RESERVED    : 8;
   }
   bits;
 
