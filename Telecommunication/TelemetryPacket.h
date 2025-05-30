@@ -75,3 +75,20 @@ typedef union {
   uint8_t data[sizeof(FillingStationStatusPacketFields)];
 }
 FillingStationStatusPacket;
+
+// GS Control
+typedef struct {
+  TelemetryHeader header;
+  uint32_t timestamp_ms;
+  uint16_t status;
+  uint16_t errorStatus;
+  uint32_t crc;
+}
+GSControlStatusPacketFields;
+
+typedef union {
+  GSControlStatusPacketFields fields;
+
+  uint8_t data[sizeof(GSControlStatusPacketFields)];
+}
+GSControlStatusPacket;
