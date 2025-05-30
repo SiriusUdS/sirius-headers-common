@@ -26,7 +26,7 @@
 /***************************************************/
 /***              Peripheral Amount              ***/
 /***************************************************/
-#define FILLING_STATION_ADC_CHANNEL_AMOUNT FILLING_STATION_TEMPERATURE_SENSOR_AMOUNT + FILLING_STATION_LOAD_CELL_AMOUNT
+#define FILLING_STATION_ADC_CHANNEL_AMOUNT (uint8_t)0x10
 #define FILLING_STATION_PWM_AMOUNT         FILLING_STATION_VALVE_AMOUNT
 #define FILLING_STATION_GPIO_AMOUNT        (FILLING_STATION_VALVE_AMOUNT * FILLING_STATION_GPIO_PER_VALVE)
 
