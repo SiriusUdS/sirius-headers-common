@@ -4,7 +4,14 @@
 
 #include "TelemetryHeader.h"
 #include "../Engine/EngineSensors.h"
+#include "../Engine/EngineStatus.h"
+#include "../Engine/EngineErrorStatus.h"
+#include "../Valve/ValveStatus.h"
+#include "../FillingStation/FillingStationStatus.h"
+#include "../FillingStation/FillingStationErrorStatus.h"
 #include "../FillingStation/FillingStationSensors.h"
+#include "../GSControl/GSControlStatus.h"
+#include "../GSControl/GSControlErrorStatus.h"
 
 typedef struct {
   TelemetryHeader header;
@@ -24,12 +31,10 @@ EngineTelemetryPacket;
 typedef struct {
   TelemetryHeader header;
   uint32_t timestamp_ms;
-  uint16_t status;
-  uint16_t errorStatus;
-  uint16_t valveStatus[ENGINE_VALVE_AMOUNT];
-  uint16_t temperatureSensorErrorStatus[ENGINE_TEMPERATURE_SENSOR_AMOUNT];
-  uint16_t pressureSensorErrorStatus[ENGINE_PRESSURE_SENSOR_AMOUNT];
-  uint8_t padding[4];
+  EngineStatus status;
+  EngineErrorStatus errorStatus;
+  ValveStatus valveStatus[ENGINE_VALVE_AMOUNT];
+  uint8_t padding[24];
   uint32_t crc;
 }
 EngineStatusPacketFields;
@@ -60,12 +65,10 @@ FillingStationTelemetryPacket;
 typedef struct {
   TelemetryHeader header;
   uint32_t timestamp_ms;
-  uint16_t status;
-  uint16_t errorStatus;
-  uint16_t valveStatus[FILLING_STATION_VALVE_AMOUNT];
-  uint16_t temperatureSensorErrorStatus[FILLING_STATION_TEMPERATURE_SENSOR_AMOUNT];
-  uint16_t pressureSensorErrorStatus[FILLING_STATION_PRESSURE_SENSOR_AMOUNT];
-  uint16_t loadCellErrorStatus[FILLING_STATION_LOAD_CELL_AMOUNT];
+  FillingStationStatus status;
+  FillingStationErrorStatus errorStatus;
+  ValveStatus valveStatus[FILLING_STATION_VALVE_AMOUNT];
+  uint8_t padding[28];
   uint32_t crc;
 }
 FillingStationStatusPacketFields;
@@ -81,8 +84,8 @@ FillingStationStatusPacket;
 typedef struct {
   TelemetryHeader header;
   uint32_t timestamp_ms;
-  uint16_t status;
-  uint16_t errorStatus;
+  GSControlStatus status;
+  GSControlErrorStatus errorStatus;
   uint8_t padding[26];
   uint32_t crc;
 }
