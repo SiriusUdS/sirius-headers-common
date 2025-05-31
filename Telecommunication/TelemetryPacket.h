@@ -29,6 +29,7 @@ typedef struct {
   uint16_t valveStatus[ENGINE_VALVE_AMOUNT];
   uint16_t temperatureSensorErrorStatus[ENGINE_TEMPERATURE_SENSOR_AMOUNT];
   uint16_t pressureSensorErrorStatus[ENGINE_PRESSURE_SENSOR_AMOUNT];
+  uint8_t padding[4];
   uint32_t crc;
 }
 EngineStatusPacketFields;
@@ -82,6 +83,7 @@ typedef struct {
   uint32_t timestamp_ms;
   uint16_t status;
   uint16_t errorStatus;
+  uint8_t padding[26];
   uint32_t crc;
 }
 GSControlStatusPacketFields;

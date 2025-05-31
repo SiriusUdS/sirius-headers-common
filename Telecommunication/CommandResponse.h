@@ -4,6 +4,8 @@
 
 #define COMMAND_RESPONSE_TYPE_CODE 0x52535
 
+#define RESPONSE_CODE_OK 0x00
+
 typedef union {
   struct {
     uint32_t type         : 20;
@@ -19,6 +21,7 @@ CommandResponseHeader;
 
 typedef struct {
   CommandResponseHeader header;
+  uint8_t               padding[36];
   uint32_t              crc;
 }
 CommandResponseFields;

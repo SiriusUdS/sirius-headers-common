@@ -19,6 +19,7 @@ GSCommandHeader;
 
 typedef struct {
   GSCommandHeader header;
+  uint8_t         padding[36];
   uint32_t        crc;
 }
 GSCommandFields;
