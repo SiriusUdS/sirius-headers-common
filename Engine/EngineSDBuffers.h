@@ -22,7 +22,7 @@ typedef struct {
 EngineSDBufferFooter;
 
 typedef struct {
-  uint8_t data[SD_CARD_BUFFER_SIZE_BYTES - sizeof(EngineSDBufferFooter)];
+  uint8_t data[(SD_CARD_BUFFER_SIZE_BYTES / 2) - sizeof(EngineSDBufferFooter)];
   EngineSDBufferFooter footer;
 }
 EngineSDFormattedData;
@@ -30,7 +30,7 @@ EngineSDFormattedData;
 typedef union {
   uint16_t values[SD_CARD_BUFFER_SIZE_BYTES / sizeof(uint16_t)];
 
-  EngineSDFormattedData sdData;
+  EngineSDFormattedData sdData[2];
 
   uint8_t hex[SD_CARD_BUFFER_SIZE_BYTES];
 }
