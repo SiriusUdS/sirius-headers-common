@@ -23,6 +23,8 @@ TelecommunicationPacketFields;
 typedef union {
   TelecommunicationPacketFields fields;
 
+  uint32_t data32[sizeof(TelecommunicationPacketFields) / sizeof(uint32_t)];
+
   uint8_t data[sizeof(TelecommunicationPacketFields)];
 }
 TelecommunicationPacket;
