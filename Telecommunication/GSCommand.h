@@ -27,6 +27,8 @@ GSCommandFields;
 typedef union {
   GSCommandFields fields;
 
+  uint32_t data32[sizeof(GSCommandFields) / sizeof(uint32_t)];
+
   uint8_t data[sizeof(GSCommandFields)];
 }
 GSCommand;

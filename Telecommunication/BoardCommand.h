@@ -46,6 +46,8 @@ BoardCommandFields;
 typedef union {
   BoardCommandFields fields;
 
+  uint32_t data32[sizeof(BoardCommandFields) / sizeof(uint32_t)];
+
   uint8_t data[sizeof(BoardCommandFields)];
 }
 BoardCommand;

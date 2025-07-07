@@ -24,6 +24,8 @@ EngineTelemetryPacketFields;
 typedef union {
   EngineTelemetryPacketFields fields;
 
+  uint32_t data32[sizeof(EngineTelemetryPacketFields) / sizeof(uint32_t)];
+
   uint8_t data[sizeof(EngineTelemetryPacketFields)];
 }
 EngineTelemetryPacket;
@@ -42,6 +44,8 @@ EngineStatusPacketFields;
 typedef union {
   EngineStatusPacketFields fields;
 
+  uint32_t data32[sizeof(EngineStatusPacketFields) / sizeof(uint32_t)];
+
   uint8_t data[sizeof(EngineStatusPacketFields)];
 }
 EngineStatusPacket;
@@ -57,6 +61,8 @@ FillingStationTelemetryPacketFields;
 
 typedef union {
   FillingStationTelemetryPacketFields fields;
+
+  uint32_t data32[sizeof(FillingStationTelemetryPacketFields) / sizeof(uint32_t)];
 
   uint8_t data[sizeof(FillingStationTelemetryPacketFields)];
 }
@@ -76,6 +82,8 @@ FillingStationStatusPacketFields;
 typedef union {
   FillingStationStatusPacketFields fields;
 
+  uint32_t data32[sizeof(FillingStationStatusPacketFields) / sizeof(uint32_t)];
+
   uint8_t data[sizeof(FillingStationStatusPacketFields)];
 }
 FillingStationStatusPacket;
@@ -93,6 +101,8 @@ GSControlStatusPacketFields;
 
 typedef union {
   GSControlStatusPacketFields fields;
+
+  uint32_t data32[sizeof(GSControlStatusPacketFields) / sizeof(uint32_t)];
 
   uint8_t data[sizeof(GSControlStatusPacketFields)];
 }

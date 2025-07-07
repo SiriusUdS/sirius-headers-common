@@ -6,8 +6,6 @@
 #define SD_CARD_FOOTER_SIZE_BYTES 0x80
 #define SD_CARD_FOOTER_SIGNATURE_SIZE_BYTES 0x40
 
-#define SD_CARD_SLOW_BUFFER_SIZE_BYTES 0x400
-
 typedef struct {
   uint32_t timestamp_ms;
   uint16_t status;
@@ -30,20 +28,10 @@ EngineSDFormattedData;
 typedef union {
   uint16_t values[SD_CARD_BUFFER_SIZE_BYTES / sizeof(uint16_t)];
 
+  uint32_t values32[SD_CARD_BUFFER_SIZE_BYTES / sizeof(uint32_t)];
+
   EngineSDFormattedData sdData[2];
 
   uint8_t hex[SD_CARD_BUFFER_SIZE_BYTES];
 }
 EngineSDCardBuffer;
-
-typedef struct {
-
-
-  uint32_t crc;
-}
-EngineSDCardSlowBufferFormatted;
-
-typedef union {
-  uint8_t hex[SD_CARD_SLOW_BUFFER_SIZE_BYTES];
-}
-EngineSDCardSlowBuffer;

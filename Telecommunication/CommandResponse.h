@@ -29,6 +29,8 @@ CommandResponseFields;
 typedef union {
   CommandResponseFields fields;
 
+  uint32_t data32[sizeof(CommandResponseFields) / sizeof(uint32_t)];
+
   uint8_t data[sizeof(CommandResponseFields)];
 }
 CommandResponse;
