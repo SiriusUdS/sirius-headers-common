@@ -5,7 +5,7 @@
 /***************************************************/
 /***            Sensors/Devices Amount           ***/
 /***************************************************/
-#define GS_CONTROL_BUTTON_AMOUNT (uint8_t)0x07
+#define GS_CONTROL_BUTTON_AMOUNT (uint8_t)0x08
 
 /***************************************************/
 /***           Peripheral Distribution           ***/
