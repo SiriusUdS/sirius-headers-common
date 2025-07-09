@@ -6,6 +6,7 @@
 /***            Sensors/Devices Amount           ***/
 /***************************************************/
 #define ENGINE_VALVE_AMOUNT              (uint8_t)0x02
+#define ENGINE_HEATPAD_AMOUNT            (uint8_t)0x02
 #define ENGINE_TELECOMMUNICATION_AMOUNT  (uint8_t)0x01
 #define ENGINE_TEMPERATURE_SENSOR_AMOUNT (uint8_t)0x08
 #define ENGINE_PRESSURE_SENSOR_AMOUNT    (uint8_t)0x02
@@ -40,6 +41,9 @@
 /***************************************************/
 #define ENGINE_IPA_VALVE_INDEX     (uint8_t)0x00
 #define ENGINE_NOS_VALVE_INDEX     (uint8_t)0x01
+
+#define ENGINE_IPA_HEATPAD_INDEX (uint8_t)0x00
+#define ENGINE_NOS_HEATPAD_INDEX (uint8_t)0x01
 
 #define ENGINE_IPA_VALVE_PWM_INDEX (uint8_t)0x00
 #define ENGINE_NOS_VALVE_PWM_INDEX (uint8_t)0x01
