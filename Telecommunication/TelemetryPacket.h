@@ -38,7 +38,8 @@ typedef struct {
   ValveStatus valveStatus[ENGINE_VALVE_AMOUNT];
   uint32_t igniteTimestamp_ms;
   uint32_t launchTimestamp_ms;
-  uint8_t padding[16];
+  uint32_t timeSinceLastCommand_ms;
+  uint8_t padding[12];
   uint32_t crc;
 }
 EngineStatusPacketFields;
@@ -76,7 +77,8 @@ typedef struct {
   FillingStationStatus status;
   FillingStationErrorStatus errorStatus;
   ValveStatus valveStatus[FILLING_STATION_VALVE_AMOUNT];
-  uint8_t padding[24];
+  uint32_t timeSinceLastCommand_ms;
+  uint8_t padding[20];
   uint32_t crc;
 }
 FillingStationStatusPacketFields;
