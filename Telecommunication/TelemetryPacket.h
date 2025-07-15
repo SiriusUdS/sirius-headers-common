@@ -99,7 +99,8 @@ typedef struct {
   GSControlStatus status;
   GSControlErrorStatus errorStatus;
   uint32_t lastReceivedGSCommandTimestamp_ms;
-  uint8_t padding[22];
+  uint32_t lastBoardSentCommandCode;
+  uint8_t padding[20];
   uint32_t crc;
 }
 GSControlStatusPacketFields;
