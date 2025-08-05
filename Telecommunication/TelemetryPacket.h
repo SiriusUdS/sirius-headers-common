@@ -12,6 +12,8 @@
 #include "../FillingStation/FillingStationSensors.h"
 #include "../GSControl/GSControlStatus.h"
 #include "../GSControl/GSControlErrorStatus.h"
+#include "../Storage/StorageStatus.h"
+#include "../Storage/StorageErrorStatus.h"
 
 typedef struct {
   TelemetryHeader header;
@@ -36,11 +38,13 @@ typedef struct {
   EngineStatus status;
   EngineErrorStatus errorStatus;
   ValveStatus valveStatus[ENGINE_VALVE_AMOUNT];
+  StorageStatus storageStatus;
+  StorageErrorStatus storageErrorStatus;
   uint32_t igniteTimestamp_ms;
   uint32_t launchTimestamp_ms;
   uint32_t timeSinceLastCommand_ms;
   uint32_t lastReceivedCommandCode;
-  uint8_t padding[8];
+  uint8_t padding[4];
   uint32_t crc;
 }
 EngineStatusPacketFields;
@@ -78,9 +82,12 @@ typedef struct {
   FillingStationStatus status;
   FillingStationErrorStatus errorStatus;
   ValveStatus valveStatus[FILLING_STATION_VALVE_AMOUNT];
+  StorageStatus storageStatus;
+  StorageErrorStatus storageErrorStatus;
+  uint32_t igniteTimestamp_ms;
   uint32_t timeSinceLastCommand_ms;
   uint32_t lastReceivedCommandCode;
-  uint8_t padding[16];
+  uint8_t padding[8];
   uint32_t crc;
 }
 FillingStationStatusPacketFields;
