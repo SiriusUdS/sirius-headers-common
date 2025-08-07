@@ -39,17 +39,17 @@
 /***************************************************/
 /***                Array Indexes                ***/
 /***************************************************/
-#define ENGINE_IPA_VALVE_INDEX     (uint8_t)0x00
-#define ENGINE_NOS_VALVE_INDEX     (uint8_t)0x01
+#define ENGINE_IPA_VALVE_INDEX     (uint8_t)0x01
+#define ENGINE_NOS_VALVE_INDEX     (uint8_t)0x00
 
-#define ENGINE_IPA_HEATPAD_INDEX (uint8_t)0x00
-#define ENGINE_NOS_HEATPAD_INDEX (uint8_t)0x01
+#define ENGINE_IPA_HEATPAD_INDEX (uint8_t)0x01
+#define ENGINE_NOS_HEATPAD_INDEX (uint8_t)0x00
 
-#define ENGINE_IPA_VALVE_PWM_INDEX (uint8_t)0x00
-#define ENGINE_NOS_VALVE_PWM_INDEX (uint8_t)0x01
+#define ENGINE_IPA_VALVE_PWM_INDEX (uint8_t)0x01
+#define ENGINE_NOS_VALVE_PWM_INDEX (uint8_t)0x00
 
-#define ENGINE_NOS_TANK_PRESSURE_SENSOR_INDEX           (uint8_t)0x00
-#define ENGINE_COMBUSTION_CHAMBER_PRESSURE_SENSOR_INDEX (uint8_t)0x01
+#define ENGINE_NOS_TANK_PRESSURE_SENSOR_INDEX           (uint8_t)0x01
+#define ENGINE_COMBUSTION_CHAMBER_PRESSURE_SENSOR_INDEX (uint8_t)0x00
 
 #define ENGINE_IPA_MAIN_VALVE_THERMISTANCE_INDEX (uint8_t)0x00
 #define ENGINE_NOS_MAIN_VALVE_THERMISTANCE_INDEX (uint8_t)0x01
@@ -64,13 +64,13 @@
 
 #define ENGINE_IGNITER_1_GPIO_INDEX        (uint8_t)0x00
 #define ENGINE_IGNITER_2_GPIO_INDEX        (uint8_t)0x01
-#define ENGINE_NOS_VALVE_CLOSED_GPIO_INDEX (uint8_t)0x02
-#define ENGINE_NOS_VALVE_OPENED_GPIO_INDEX (uint8_t)0x03
-#define ENGINE_IPA_VALVE_CLOSED_GPIO_INDEX (uint8_t)0x04
-#define ENGINE_IPA_VALVE_OPENED_GPIO_INDEX (uint8_t)0x05
+#define ENGINE_NOS_VALVE_CLOSED_GPIO_INDEX (uint8_t)0x04
+#define ENGINE_NOS_VALVE_OPENED_GPIO_INDEX (uint8_t)0x05
+#define ENGINE_IPA_VALVE_CLOSED_GPIO_INDEX (uint8_t)0x02
+#define ENGINE_IPA_VALVE_OPENED_GPIO_INDEX (uint8_t)0x03
 
-#define ENGINE_IPA_HEATPAD_GPIO_INDEX (uint8_t)0x06
-#define ENGINE_NOS_HEATPAD_GPIO_INDEX (uint8_t)0x07
+#define ENGINE_IPA_HEATPAD_GPIO_INDEX (uint8_t)0x07
+#define ENGINE_NOS_HEATPAD_GPIO_INDEX (uint8_t)0x06
 
 #define ENGINE_STORAGE_SD_CARD_INDEX        (uint8_t)0x00
 #define ENGINE_STORAGE_EXTERNAL_FLASH_INDEX (uint8_t)0x01
