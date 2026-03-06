@@ -1,5 +1,8 @@
 #pragma once
-
+/**
+ * @deprecated DO NOT USE THIS FILE IN THE ETHERNET ARCHITECTURE
+ * 2025 file competition
+ */
 #include <stdint.h>
 
 #define COMMAND_RESPONSE_TYPE_CODE 0x52535

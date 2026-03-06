@@ -1,4 +1,8 @@
 #pragma once
+/**
+ * @deprecated DO NOT USE THIS FILE IN THE ETHERNET ARCHITECTURE
+ * 2025 competition
+ */
 
 #include <stdint.h>
 

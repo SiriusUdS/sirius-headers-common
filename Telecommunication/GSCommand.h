@@ -1,5 +1,8 @@
 #pragma once
-
+/***
+ * @deprecated DO NOT USE THIS FILE IN THE ETHERNET ARCHITECTURE
+ * 2025 competition file
+ */
 #include <stdint.h>
 
 #define GS_COMMAND_TYPE_CODE 0x47834

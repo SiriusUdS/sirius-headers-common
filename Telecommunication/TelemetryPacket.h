@@ -1,5 +1,10 @@
 #pragma once
 
+/***
+ * 2025 competition verson.
+ * @deprecated Do not use this file for communication in the ethernet architecture.
+ */
+
 #include <stdint.h>
 
 #include "TelemetryHeader.h"
@@ -22,6 +27,7 @@ typedef struct {
   uint32_t crc;
 }
 EngineTelemetryPacketFields;
+
 
 typedef union {
   EngineTelemetryPacketFields fields;

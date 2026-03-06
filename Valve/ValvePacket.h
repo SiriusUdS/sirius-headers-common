@@ -13,6 +13,7 @@ typedef struct {
 }
 ValvePacketData;
 
+/// @deprecated 2025 version
 typedef struct {
   TelemetryHeader header;
   ValvePacketData rawData;
@@ -20,6 +21,7 @@ typedef struct {
 }
 ValvePacketFields;
 
+/// @deprecated 2025 version
 typedef union {
   ValvePacketFields fields;
 
