@@ -1,7 +1,7 @@
 #pragma once
 #include <stdint.h>
 
-#define SYNC_PACKET_CODDE   (uint8_t)0x01
+
 
 typedef struct {
     uint8_t forceState:1;
