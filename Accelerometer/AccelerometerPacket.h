@@ -1,31 +1,29 @@
 #pragma once
 
 #include "AccelerometerData.h"
-#include "AccelerometerStatus.h"
-#include "AccelerometerErrorStatus.h"
 
-#include "../Telecommunication/TelemetryHeader.h"
+#include "../CAN/CANHeader.h"
 
 typedef struct {
-  AccelerometerData data;
-
-  AccelerometerErrorStatus  errorStatus;
-  AccelerometerStatus       status;
-
-  uint32_t timeStamp_ms;
+	AccelerometerData data;
+	uint32_t timeStamp_ms;
 }
 AccelerometerPacketData;
 
-typedef struct {
-  TelemetryHeader         header;
-  AccelerometerPacketData rawData;
-  uint32_t                crc;
-}
-AccelerometerPacketFields;
-
 typedef union {
-  AccelerometerPacketFields fields;
+	AccelerometerPacketData fields;
+	uint8_t data[sizeof(AccelerometerPacketData)];
+}
+AccelerometerPayload;
 
-  uint8_t data[sizeof(AccelerometerPacketFields)];
+typedef struct {
+	CANHeader header;
+	AccelerometerPayload payload;
 }
 AccelerometerPacket;
+
+// errorCode bit 0 = notInitialized
+// errorCode bit 1 = nullFunctionPointer
+// errorCode bit 2 = defaultFunctionCalled
+// errorCode bit 3 = notConnected
+// errorCode bit 4-7 = RESERVED
