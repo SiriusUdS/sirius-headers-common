@@ -1,7 +1,7 @@
 #pragma once
 
+#include <stdint.h>
 #include "AccelerometerData.h"
-
 #include "../CAN/CANHeader.h"
 
 typedef struct {
@@ -26,4 +26,4 @@ AccelerometerPacket;
 // errorCode bit 1 = nullFunctionPointer
 // errorCode bit 2 = defaultFunctionCalled
 // errorCode bit 3 = notConnected
-// errorCode bit 4-7 = RESERVED
+// errorCode bit 4-6 = RESERVED
