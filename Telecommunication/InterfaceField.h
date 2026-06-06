@@ -8,7 +8,8 @@ typedef union {
         uint8_t deviceNotFound: 1;
         uint8_t invalidState: 1;
         uint8_t crcError: 1;
-        uint8_t reserved: 2;
+        uint8_t openState: 1;
+        uint8_t closeState: 1;
     } bits;
     uint8_t value;
 } InterfaceFieldFlags;
