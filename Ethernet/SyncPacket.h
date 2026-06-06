@@ -18,9 +18,9 @@ typedef union {
 } SyncFlags;
 
 typedef struct {
-    uint8_t deviceIDFrom:8;
-    uint8_t deviceIDTo:8;
-    uint8_t syncState:8;
+    uint8_t deviceIDFrom;
+    uint8_t deviceIDTo;
+    uint8_t syncState;
     SyncFlags syncFlags;
 } FrameSyncPacket;
 
