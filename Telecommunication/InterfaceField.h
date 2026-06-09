@@ -19,8 +19,8 @@ typedef struct {
     InterfaceFieldFlags ethernetFlags;
     InterfaceFieldFlags sdCardFlags;
     InterfaceFieldFlags valve1Flags;
-    InterfaceField valve2Flags;
-    InterfaceField igniterFlags;
+    InterfaceFieldFlags valve2Flags;
+    InterfaceFieldFlags igniterFlags;
     uint16_t reserved;
     uint32_t erno;
 } InterfaceFrame;
