@@ -4,12 +4,13 @@
 
 typedef union {
   struct {
-    uint16_t state : 3;
-    uint16_t isPluggedIn : 1;
-    uint16_t RESERVED : 12;
+    uint8_t state : 3;
+    uint8_t isPluggedIn : 1;
+    uint8_t writeEnabled : 1;
+    uint8_t RESERVED : 3;
   }
   bits;
-  
-  uint16_t value;
+
+  uint8_t value;
 }
 StorageStatus;
